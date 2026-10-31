@@ -1,0 +1,29 @@
+{
+ "_origem": "analise-conteudos/analises/2026-10-23/ajustes_video_riachuelo_floral_laise.md (plano corrigido em 23/10)",
+ "trechos": [
+  {"de": 0.0,   "ate": 8.7,   "vel": 1.3, "nota": "introdução falada: marca + escolha (fica, acelerada)"},
+  {"de": 8.7,   "ate": 11.3,  "vel": 1.3, "nota": "'não tem como não amar', já com o floral vestido"},
+  {"de": 11.3,  "ate": 23.7,  "vel": 1.0, "nota": "fatos do floral: viscose, tecido duplo, busto, sereia"},
+  {"de": 25.25, "ate": 26.4,  "vel": 1.0, "nota": "zíper atrás (corta 'fica lindíssimo no corpo')"},
+  {"de": 31.75, "ate": 36.05, "vel": 1.0, "nota": "estampa pincelada (corta 'olha que modelagem incrível...')"},
+  {"de": 38.55, "ate": 62.55, "vel": 1.0, "nota": "laise: pedido no provador, forro, lastex, 1,64 m, ressalva"},
+  {"de": 66.75, "ate": 71.08, "vel": 1.0, "nota": "escolha 1 ou 2 + pedido de link (corta 'qualidade absurdamente incrível')"}
+ ],
+ "cortar_pausas_acima_s": 0.4,
+ "textos": [
+  {"tipo": "gancho", "de": 0.0,   "ate": 3.9,  "texto": "Floral ou laise? · 2 vestidos da Riachuelo"},
+  {"tipo": "cta",    "de": 1.0,   "ate": "fim", "texto": "Comenta QUERO 💬"},
+  {"tipo": "rotulo", "de": 11.3,  "ate": 23.7, "texto": "Fran · 1,64 m"},
+  {"tipo": "meio",   "de": 38.55, "ate": 41.4, "texto": "O que vocês me pediram no provador 💙"},
+  {"tipo": "rotulo", "de": 41.4,  "ate": 54.3, "texto": "Fran · 1,64 m"},
+  {"tipo": "final",  "de": 66.75, "ate": "fim", "texto": "1 floral ou 2 laise? · Comenta QUERO"}
+ ],
+ "zooms": [
+  {"de": 13.1, "ate": 14.3, "nota": "tecido duplo na frente"},
+  {"de": 25.25, "ate": 26.4, "nota": "zíper"},
+  {"de": 43.0, "ate": 44.2, "nota": "100% forrado"},
+  {"de": 54.3, "ate": 56.8, "nota": "ressalva: 1,64 m, fica curtinho"}
+ ],
+ "destaques": ["Riachuelo", "viscose", "sereia", "pincelada", "laise", "forrado", "lastex", "1", ",64m", "curtinho", "primeiro", "segundo", "link"],
+ "correcoes": {"acenturado": "acinturado", "lese": "laise"}
+}

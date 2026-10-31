@@ -1,0 +1,7 @@
+{
+ "name": "edicao-fran-remotion",
+ "private": true,
+ "type": "module",
+ "scripts": {"studio": "remotion studio src/index.jsx"},
+ "dependencies": {"remotion": "4.0.300", "@remotion/cli": "4.0.300", "react": "18.3.1", "react-dom": "18.3.1"}
+}

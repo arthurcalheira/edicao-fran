@@ -1,0 +1,5 @@
+projetos/*/bruto.*
+projetos/*/saida/*.mp4
+projetos/*/saida/*.png
+remotion/node_modules/
+__pycache__/

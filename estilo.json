@@ -1,0 +1,11 @@
+{
+ "fonte": "Inter Display",
+ "cor_destaque": "#FFE14D",
+ "cor_cta": "#E4405F",
+ "legenda": {"tamanho": 78, "y_base": 1230, "palavras_por_bloco": 3},
+ "gancho": {"tamanho": 74, "y_topo": 300},
+ "cta": {"tamanho": 40, "y_topo": 560},
+ "rotulo": {"tamanho": 40, "y_topo": 560},
+ "zoom_padrao": 1.12,
+ "area_segura": "Meta Reels: 14% topo (270 px), 35% base (texto acima de y=1250), 6% laterais (65 px)"
+}

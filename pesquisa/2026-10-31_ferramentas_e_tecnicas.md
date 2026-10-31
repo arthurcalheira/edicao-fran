@@ -13,7 +13,7 @@ As regras de conteúdo vêm do repositório `analise-conteudos` (STATE.md e `ana
 | 3 | [faster-whisper](https://github.com/SYSTRAN/faster-whisper) e [WhisperX](https://github.com/m-bain/whisperX) | Transcrição com o tempo de cada palavra. O WhisperX tem alinhador próprio para português | Motor de transcrição; já é o que o `analise-conteudos` usa |
 | 4 | [auto-editor](https://github.com/WyattBlue/auto-editor), domínio público | Corta silêncio e acelera trechos. Exporta para Premiere, Resolve e FCP | Alternativa para o passe de silêncio |
 | 5 | [pycaps](https://github.com/francozanardi/pycaps), MIT, alpha | Legendas estilo TikTok com CSS e emoji colorido, renderizadas no Chromium | Opção para legenda mais bonita, mas imatura |
-| 6 | [Remotion + skills](https://github.com/remotion-dev/skills) | Vídeo em React, com skills oficiais de legenda e render | **Pago se a empresa tiver mais de 3 funcionários** e lento em CPU; só se o design virar diferencial |
+| 6 | [Remotion + skills](https://github.com/remotion-dev/skills) | Vídeo em React, com skills oficiais de legenda e render | **Viável (testado em 31/10).** É grátis para pessoa física e empresa com até 3 funcionários. Um Reel de 60 s levou 5 min 14 s para renderizar aqui, contra 31 s do ffmpeg. A camada visual fica mais bonita (legenda animada, emoji colorido, cards), mas não exporta projeto editável |
 | 7 | [blazerior/videoediting-claude-skill](https://github.com/blazerior/videoediting-claude-skill) | Quase o nosso caso: faster-whisper, corte de filler, punch-in e −14 LUFS | Referência, imatura |
 
 **Descartados:**

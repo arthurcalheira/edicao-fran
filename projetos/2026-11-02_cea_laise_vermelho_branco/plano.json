@@ -20,22 +20,16 @@
    "nota": "camisa PP com motivo, vazadinha, forro do short (corta 'look super lindo, elegante, arrumado')"
   },
   {
-   "de": 37.9,
+   "de": 38.85,
    "ate": 40.55,
    "vel": 1.0,
-   "nota": "giro de costas + lastex (2ª tomada; a 1ª, em 31 s, mostra menos as costas)"
+   "nota": "lastex (2ª tomada), começando na fala: corta o giro sem fala (pedido da Fran)"
   },
   {
-   "de": 52.55,
-   "ate": 55.1,
-   "vel": 1.0,
-   "nota": "'olha isso aqui' + close da laise na manga (corta as 2 repetições de 'elegante e arrumada no verão' e o corredor vazio)"
-  },
-  {
-   "de": 61.8,
+   "de": 62.45,
    "ate": 71.95,
    "vel": 1.0,
-   "nota": "branco: a dúvida, clássico, mesma modelagem (corta regata Mindset, jeans e 'agrega elegância')"
+   "nota": "branco, já de frente: corta o giro de entrada; troca de look direto do lastex"
   },
   {
    "de": 90.9,
@@ -74,19 +68,24 @@
  ],
  "zooms": [
   {
-   "de": 10.7,
-   "ate": 12.25,
-   "nota": "100% forrado"
+   "de": 8.5,
+   "ate": 11.95,
+   "nota": "shortinho alfaiatado, 100% forrado"
   },
   {
    "de": 21.8,
-   "ate": 23.3,
-   "nota": "toda vazadinha"
+   "ate": 24.2,
+   "nota": "toda vazadinha, short com forro"
+  },
+  {
+   "de": 39.0,
+   "ate": 40.55,
+   "nota": "lastex aqui atrás"
   },
   {
    "de": 68.7,
-   "ate": 70.6,
-   "nota": "mesma modelagem"
+   "ate": 71.9,
+   "nota": "mesma modelagem: short e blusa"
   }
  ],
  "destaques": [

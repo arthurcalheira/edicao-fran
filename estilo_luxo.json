@@ -40,6 +40,10 @@
   180,
   120
  ],
- "zoom_padrao": 1.1,
- "fonte_legenda": "Montserrat SemiBold"
+ "fonte_legenda": "Montserrat SemiBold",
+ "zoom": {
+  "tipo": "vai e volta",
+  "max": 1.18,
+  "nota": "entra e sai suave (seno) em cada janela do plano"
+ }
 }

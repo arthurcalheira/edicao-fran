@@ -39,53 +39,51 @@ Dialogue: 0,0:00:17.43,0:00:18.97,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000
 Dialogue: 1,0:00:17.43,0:00:18.97,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}e o short tem
 Dialogue: 0,0:00:18.97,0:00:20.47,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}forro em 100%
 Dialogue: 1,0:00:18.97,0:00:20.47,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}forro em 100%
-Dialogue: 0,0:00:20.47,0:00:20.72,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}dele.
-Dialogue: 1,0:00:20.47,0:00:20.72,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}dele.
-Dialogue: 0,0:00:21.64,0:00:22.00,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}olha,
-Dialogue: 1,0:00:21.64,0:00:22.00,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}olha,
-Dialogue: 0,0:00:22.00,0:00:23.38,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}com {\i1}lastex{\i0} aqui atrás,
-Dialogue: 1,0:00:22.00,0:00:23.38,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}com {\i1}lastex{\i0} aqui atrás,
-Dialogue: 0,0:00:23.38,0:00:23.88,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}Olha isso aqui.
-Dialogue: 1,0:00:23.38,0:00:23.88,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}Olha isso aqui.
-Dialogue: 0,0:00:26.62,0:00:28.10,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}A dúvida é cruel
-Dialogue: 1,0:00:26.62,0:00:28.10,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}A dúvida é cruel
-Dialogue: 0,0:00:28.10,0:00:28.66,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}aqui,
-Dialogue: 1,0:00:28.10,0:00:28.66,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}aqui,
-Dialogue: 0,0:00:28.66,0:00:28.74,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}hein?
-Dialogue: 1,0:00:28.66,0:00:28.74,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}hein?
-Dialogue: 0,0:00:28.74,0:00:29.90,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}O {\i1}vermelho{\i0} ou o
-Dialogue: 1,0:00:28.74,0:00:29.90,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}O {\i1}vermelho{\i0} ou o
-Dialogue: 0,0:00:29.90,0:00:30.36,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}{\i1}branco?{\i0}
-Dialogue: 1,0:00:29.90,0:00:30.36,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}{\i1}branco?{\i0}
-Dialogue: 0,0:00:30.36,0:00:31.50,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}O {\i1}branco{\i0} é {\i1}clássico,{\i0}
-Dialogue: 1,0:00:30.36,0:00:31.50,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}O {\i1}branco{\i0} é {\i1}clássico,{\i0}
-Dialogue: 0,0:00:31.50,0:00:31.70,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}gente,
-Dialogue: 1,0:00:31.50,0:00:31.70,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}gente,
-Dialogue: 0,0:00:31.70,0:00:32.74,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}pra vida toda.
-Dialogue: 1,0:00:31.70,0:00:32.74,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}pra vida toda.
-Dialogue: 0,0:00:32.74,0:00:33.90,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}É a mesma {\i1}modelagem{\i0}
-Dialogue: 1,0:00:32.74,0:00:33.90,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}É a mesma {\i1}modelagem{\i0}
-Dialogue: 0,0:00:33.90,0:00:34.68,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}do {\i1}vermelho,{\i0}
-Dialogue: 1,0:00:33.90,0:00:34.68,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}do {\i1}vermelho,{\i0}
-Dialogue: 0,0:00:34.68,0:00:35.38,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}o short e tanto
-Dialogue: 1,0:00:34.68,0:00:35.38,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}o short e tanto
-Dialogue: 0,0:00:35.38,0:00:36.03,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}a blusa.
-Dialogue: 1,0:00:35.38,0:00:36.03,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}a blusa.
-Dialogue: 0,0:00:36.03,0:00:37.01,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}Se quiser algum {\i1}link,{\i0}
-Dialogue: 1,0:00:36.03,0:00:37.01,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}Se quiser algum {\i1}link,{\i0}
-Dialogue: 0,0:00:37.01,0:00:37.71,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}pode pedir aqui nos
-Dialogue: 1,0:00:37.01,0:00:37.71,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}pode pedir aqui nos
-Dialogue: 0,0:00:37.71,0:00:38.37,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}comentários que eu te
-Dialogue: 1,0:00:37.71,0:00:38.37,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}comentários que eu te
-Dialogue: 0,0:00:38.37,0:00:39.03,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}envio com o {\i1}cupom{\i0}
-Dialogue: 1,0:00:38.37,0:00:39.03,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}envio com o {\i1}cupom{\i0}
-Dialogue: 0,0:00:39.03,0:00:39.65,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}de desconto.
-Dialogue: 1,0:00:39.03,0:00:39.65,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}de desconto.
+Dialogue: 0,0:00:20.47,0:00:20.69,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}dele.
+Dialogue: 1,0:00:20.47,0:00:20.69,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}dele.
+Dialogue: 0,0:00:20.69,0:00:21.05,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}olha,
+Dialogue: 1,0:00:20.69,0:00:21.05,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}olha,
+Dialogue: 0,0:00:21.05,0:00:22.47,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}com {\i1}lastex{\i0} aqui atrás,
+Dialogue: 1,0:00:21.05,0:00:22.47,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}com {\i1}lastex{\i0} aqui atrás,
+Dialogue: 0,0:00:22.47,0:00:23.95,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}A dúvida é cruel
+Dialogue: 1,0:00:22.47,0:00:23.95,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}A dúvida é cruel
+Dialogue: 0,0:00:23.95,0:00:24.51,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}aqui,
+Dialogue: 1,0:00:23.95,0:00:24.51,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}aqui,
+Dialogue: 0,0:00:24.51,0:00:24.59,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}hein?
+Dialogue: 1,0:00:24.51,0:00:24.59,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}hein?
+Dialogue: 0,0:00:24.59,0:00:25.75,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}O {\i1}vermelho{\i0} ou o
+Dialogue: 1,0:00:24.59,0:00:25.75,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}O {\i1}vermelho{\i0} ou o
+Dialogue: 0,0:00:25.75,0:00:26.21,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}{\i1}branco?{\i0}
+Dialogue: 1,0:00:25.75,0:00:26.21,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}{\i1}branco?{\i0}
+Dialogue: 0,0:00:26.21,0:00:27.35,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}O {\i1}branco{\i0} é {\i1}clássico,{\i0}
+Dialogue: 1,0:00:26.21,0:00:27.35,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}O {\i1}branco{\i0} é {\i1}clássico,{\i0}
+Dialogue: 0,0:00:27.35,0:00:27.55,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}gente,
+Dialogue: 1,0:00:27.35,0:00:27.55,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}gente,
+Dialogue: 0,0:00:27.55,0:00:28.59,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}pra vida toda.
+Dialogue: 1,0:00:27.55,0:00:28.59,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}pra vida toda.
+Dialogue: 0,0:00:28.59,0:00:29.75,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}É a mesma {\i1}modelagem{\i0}
+Dialogue: 1,0:00:28.59,0:00:29.75,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}É a mesma {\i1}modelagem{\i0}
+Dialogue: 0,0:00:29.75,0:00:30.53,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}do {\i1}vermelho,{\i0}
+Dialogue: 1,0:00:29.75,0:00:30.53,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}do {\i1}vermelho,{\i0}
+Dialogue: 0,0:00:30.53,0:00:31.23,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}o short e tanto
+Dialogue: 1,0:00:30.53,0:00:31.23,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}o short e tanto
+Dialogue: 0,0:00:31.23,0:00:31.88,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}a blusa.
+Dialogue: 1,0:00:31.23,0:00:31.88,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}a blusa.
+Dialogue: 0,0:00:31.88,0:00:32.86,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}Se quiser algum {\i1}link,{\i0}
+Dialogue: 1,0:00:31.88,0:00:32.86,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}Se quiser algum {\i1}link,{\i0}
+Dialogue: 0,0:00:32.86,0:00:33.56,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}pode pedir aqui nos
+Dialogue: 1,0:00:32.86,0:00:33.56,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}pode pedir aqui nos
+Dialogue: 0,0:00:33.56,0:00:34.22,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}comentários que eu te
+Dialogue: 1,0:00:33.56,0:00:34.22,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}comentários que eu te
+Dialogue: 0,0:00:34.22,0:00:34.88,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}envio com o {\i1}cupom{\i0}
+Dialogue: 1,0:00:34.22,0:00:34.88,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}envio com o {\i1}cupom{\i0}
+Dialogue: 0,0:00:34.88,0:00:35.50,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}de desconto.
+Dialogue: 1,0:00:34.88,0:00:35.50,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}de desconto.
 Dialogue: 0,0:00:00.00,0:00:04.00,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}COMPRINHAS C&A\N{\fs18} \N{\fnPlayfair Display\fs108\fsp0}{\i1}Laise{\i0} pro verão
 Dialogue: 1,0:00:00.00,0:00:04.00,T,,0,0,0,,{\an2\pos(540,1180)\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}COMPRINHAS C&A\N{\fs18} \N{\fnPlayfair Display\fs108\fsp0}{\i1}Laise{\i0} pro verão
 Dialogue: 0,0:00:04.00,0:00:10.95,T,,0,0,0,,{\an2\pos(542,1098)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}FRAN · 1,64 M · CAMISA PP
 Dialogue: 1,0:00:04.00,0:00:10.95,T,,0,0,0,,{\an2\pos(540,1095)\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}FRAN · 1,64 M · CAMISA PP
-Dialogue: 0,0:00:36.03,0:00:39.67,T,,0,0,0,,{\an2\pos(542,1088)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&\fad(180,120)}{\fnMontserrat Medium\fs50}Comenta {\fnMontserrat ExtraBold\fs84}QUERO
-Dialogue: 1,0:00:36.03,0:00:39.67,T,,0,0,0,,{\an2\pos(540,1085)\fad(180,120)}{\fnMontserrat Medium\fs50}Comenta {\fnMontserrat ExtraBold\fs84}QUERO
-Dialogue: 0,0:00:39.67,0:00:42.15,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&\fad(180,120)}{\fs104}{\i1}Vermelho{\i0} ou {\i1}branco{\i0}?
-Dialogue: 1,0:00:39.67,0:00:42.15,T,,0,0,0,,{\an2\pos(540,1180)\fad(180,120)}{\fs104}{\i1}Vermelho{\i0} ou {\i1}branco{\i0}?
+Dialogue: 0,0:00:31.88,0:00:35.52,T,,0,0,0,,{\an2\pos(542,1088)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&\fad(180,120)}{\fnMontserrat Medium\fs50}Comenta {\fnMontserrat ExtraBold\fs84}QUERO
+Dialogue: 1,0:00:31.88,0:00:35.52,T,,0,0,0,,{\an2\pos(540,1085)\fad(180,120)}{\fnMontserrat Medium\fs50}Comenta {\fnMontserrat ExtraBold\fs84}QUERO
+Dialogue: 0,0:00:35.52,0:00:38.00,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&\fad(180,120)}{\fs104}{\i1}Vermelho{\i0} ou {\i1}branco{\i0}?
+Dialogue: 1,0:00:35.52,0:00:38.00,T,,0,0,0,,{\an2\pos(540,1180)\fad(180,120)}{\fs104}{\i1}Vermelho{\i0} ou {\i1}branco{\i0}?

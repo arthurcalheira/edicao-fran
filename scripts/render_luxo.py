@@ -92,12 +92,15 @@ def main(projeto):
         f"Style: T,{F},{e['legenda']['tamanho']},&H00FFFFFF,&H0,&H0,&H0,0,0,0,0,100,100,0,0,1,0,0,2,70,70,0,1\n\n"
         "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n" + "\n".join(ev) + "\n")
 
+    # Zoom "vai e volta": em cada janela do plano, entra até o máximo e volta, numa curva suave (seno).
+    # Sobe para 2x antes do zoompan para o enquadramento não tremer no arredondamento.
     vf = "[0:v]null[base]"
     if d["zooms"]:
-        z = e["zoom_padrao"]
-        janelas = "+".join(f"between(t,{x['de']},{x['ate']})" for x in d["zooms"])
-        vf = (f"[0:v]split[a][b];[b]crop=iw/{z}:ih/{z},scale=1080:1920[z];"
-              f"[a][z]overlay=0:0:enable='{janelas}'[base]")
+        zm, fps = e["zoom"]["max"], d["fps"]
+        curva = "+".join(f"between(in/{fps},{x['de']},{x['ate']})*sin(PI*(in/{fps}-{x['de']})/{x['ate'] - x['de']})"
+                         for x in d["zooms"])
+        vf = (f"[0:v]scale=2160:3840:flags=lanczos,zoompan=z='1+{zm - 1}*({curva})':d=1:"
+              f"x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':s=1080x1920:fps={fps}[base]")
     fontes = os.path.expanduser("~/.fonts")
     vf += f";[base]ass={ass}:fontsdir={fontes}[v]"
     destino = os.path.join(projeto, "saida", "final_luxo.mp4")

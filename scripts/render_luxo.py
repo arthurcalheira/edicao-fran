@@ -4,6 +4,8 @@ Uso: python3 scripts/render_luxo.py projetos/<nome>
 Lê <projeto>/saida/cortado.json e estilo_luxo.json. Grava <projeto>/saida/final_luxo.mp4 (e legenda_luxo.ass).
 - Palavra-chave (lista "destaques" do plano) em itálico, sem cor.
 - Textos do plano: *assim* vira itálico; no gancho, "SOBRETÍTULO | título".
+- Legenda em Montserrat; "quero" falado ganha ênfase (caixa alta, ExtraBold, maior).
+- O CTA "Comenta QUERO" só aparece na janela do plano (quando ela pede o link), não o vídeo todo.
 - Enquanto o gancho ou o texto final estão na tela, a legenda some (o texto já repete a fala).
 - Precisa das fontes Playfair Display instaladas (ver README).
 """
@@ -33,6 +35,7 @@ def main(projeto):
     e = json.load(open(os.path.join(RAIZ, "estilo_luxo.json")))
     d = json.load(open(os.path.join(projeto, "saida", "cortado.json")))
     F, FC, sp = e["fonte"], e["fonte_caixa_alta"], e["espacamento_caixa_alta"]
+    FL = e["fonte_legenda"]
     fad = r"\fad({},{})".format(*e["fade_ms"])
     caps = lambda tam: rf"{{\fn{FC}\fs{tam}\fsp{sp}}}"  # noqa: E731
     ev = []
@@ -55,8 +58,13 @@ def main(projeto):
         partes = []
         for w in b["palavras"]:
             p = EMOJI.sub("", w["p"])
-            partes.append(rf"{{\i1}}{p}{{\i0}}" if p.strip(".,!?…").lower() in destaques else p)
-        texto(b["i"], b["f"], " ".join(partes).replace(" %", "%"), 540, e["legenda"]["y_base"], 2)
+            nucleo = p.strip(".,!?…").lower()
+            if nucleo == "quero":  # ênfase quando ela fala a palavra
+                partes.append(rf"{{\fn{e['cta']['fonte_quero']}\fs{round(e['legenda']['tamanho'] * 1.25)}}}"
+                              rf"{p.upper()}{{\fn{FL}\fs{e['legenda']['tamanho']}}}")
+            else:
+                partes.append(rf"{{\i1}}{p}{{\i0}}" if nucleo in destaques else p)
+        texto(b["i"], b["f"], rf"{{\fn{FL}}}" + " ".join(partes).replace(" %", "%"), 540, e["legenda"]["y_base"], 2)
 
     for t in d["textos"]:
         de, ate = t["de"], t["ate"]
@@ -70,7 +78,10 @@ def main(projeto):
         elif t["tipo"] == "rotulo":
             texto(de, ate, caps(e["rotulo"]["tamanho"]) + t["texto"], 540, e["rotulo"]["y_base"], 2, fad)
         elif t["tipo"] == "cta":
-            texto(de, ate, caps(e["cta"]["tamanho"]) + t["texto"], 540, e["cta"]["y_base"], 2, fad)
+            # Só na janela em que ela pede o link (definida no plano), com QUERO em destaque.
+            c = e["cta"]
+            txt = re.sub(r"QUERO", rf"{{\\fn{c['fonte_quero']}\\fs{c['tamanho_quero']}}}QUERO", t["texto"])
+            texto(de, ate, rf"{{\fn{c['fonte']}\fs{c['tamanho']}}}" + txt, 540, c["y_base"], 2, fad)
 
     ass = os.path.join(projeto, "saida", "legenda_luxo.ass")
     open(ass, "w").write(

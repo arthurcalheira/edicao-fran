@@ -7,163 +7,85 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: T,Playfair Display,74,&H00FFFFFF,&H0,&H0,&H0,0,0,0,0,100,100,0,0,1,0,0,2,70,70,0,1
+Style: T,Playfair Display,62,&H00FFFFFF,&H0,&H0,&H0,0,0,0,0,100,100,0,0,1,0,0,2,70,70,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:05.12,0:00:06.38,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}foca nisso aqui,
-Dialogue: 0,0:00:05.12,0:00:06.38,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}foca nisso aqui,
-Dialogue: 0,0:00:05.12,0:00:06.38,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}foca nisso aqui,
-Dialogue: 1,0:00:05.12,0:00:06.38,T,,0,0,0,,{\an2\pos(540,1180)}foca nisso aqui,
-Dialogue: 0,0:00:06.38,0:00:06.86,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}{\i1}Laise,{\i0}
-Dialogue: 0,0:00:06.38,0:00:06.86,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}{\i1}Laise,{\i0}
-Dialogue: 0,0:00:06.38,0:00:06.86,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}{\i1}Laise,{\i0}
-Dialogue: 1,0:00:06.38,0:00:06.86,T,,0,0,0,,{\an2\pos(540,1180)}{\i1}Laise,{\i0}
-Dialogue: 0,0:00:06.86,0:00:07.20,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}gente,
-Dialogue: 0,0:00:06.86,0:00:07.20,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}gente,
-Dialogue: 0,0:00:06.86,0:00:07.20,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}gente,
-Dialogue: 1,0:00:06.86,0:00:07.20,T,,0,0,0,,{\an2\pos(540,1180)}gente,
-Dialogue: 0,0:00:07.20,0:00:08.80,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}com shortinho pegado
-Dialogue: 0,0:00:07.20,0:00:08.80,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}com shortinho pegado
-Dialogue: 0,0:00:07.20,0:00:08.80,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}com shortinho pegado
-Dialogue: 1,0:00:07.20,0:00:08.80,T,,0,0,0,,{\an2\pos(540,1180)}com shortinho pegado
-Dialogue: 0,0:00:08.80,0:00:09.46,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}{\i1}alfaiatado,{\i0}
-Dialogue: 0,0:00:08.80,0:00:09.46,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}{\i1}alfaiatado,{\i0}
-Dialogue: 0,0:00:08.80,0:00:09.46,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}{\i1}alfaiatado,{\i0}
-Dialogue: 1,0:00:08.80,0:00:09.46,T,,0,0,0,,{\an2\pos(540,1180)}{\i1}alfaiatado,{\i0}
-Dialogue: 0,0:00:09.46,0:00:10.99,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}100% {\i1}forrado.{\i0}
-Dialogue: 0,0:00:09.46,0:00:10.99,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}100% {\i1}forrado.{\i0}
-Dialogue: 0,0:00:09.46,0:00:10.99,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}100% {\i1}forrado.{\i0}
-Dialogue: 1,0:00:09.46,0:00:10.99,T,,0,0,0,,{\an2\pos(540,1180)}100% {\i1}forrado.{\i0}
-Dialogue: 0,0:00:10.99,0:00:12.09,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}A camisa de botão,
-Dialogue: 0,0:00:10.99,0:00:12.09,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}A camisa de botão,
-Dialogue: 0,0:00:10.99,0:00:12.09,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}A camisa de botão,
-Dialogue: 1,0:00:10.99,0:00:12.09,T,,0,0,0,,{\an2\pos(540,1180)}A camisa de botão,
-Dialogue: 0,0:00:12.09,0:00:13.29,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}peguei tamanho {\i1}PP{\i0} pra
-Dialogue: 0,0:00:12.09,0:00:13.29,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}peguei tamanho {\i1}PP{\i0} pra
-Dialogue: 0,0:00:12.09,0:00:13.29,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}peguei tamanho {\i1}PP{\i0} pra
-Dialogue: 1,0:00:12.09,0:00:13.29,T,,0,0,0,,{\an2\pos(540,1180)}peguei tamanho {\i1}PP{\i0} pra
-Dialogue: 0,0:00:13.29,0:00:14.13,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}ficar mais sequinha no
-Dialogue: 0,0:00:13.29,0:00:14.13,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}ficar mais sequinha no
-Dialogue: 0,0:00:13.29,0:00:14.13,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}ficar mais sequinha no
-Dialogue: 1,0:00:13.29,0:00:14.13,T,,0,0,0,,{\an2\pos(540,1180)}ficar mais sequinha no
-Dialogue: 0,0:00:14.13,0:00:15.05,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}corpo e ficou ótima
-Dialogue: 0,0:00:14.13,0:00:15.05,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}corpo e ficou ótima
-Dialogue: 0,0:00:14.13,0:00:15.05,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}corpo e ficou ótima
-Dialogue: 1,0:00:14.13,0:00:15.05,T,,0,0,0,,{\an2\pos(540,1180)}corpo e ficou ótima
-Dialogue: 0,0:00:15.05,0:00:15.99,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}no comprimento também.
-Dialogue: 0,0:00:15.05,0:00:15.99,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}no comprimento também.
-Dialogue: 0,0:00:15.05,0:00:15.99,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}no comprimento também.
-Dialogue: 1,0:00:15.05,0:00:15.99,T,,0,0,0,,{\an2\pos(540,1180)}no comprimento também.
-Dialogue: 0,0:00:16.39,0:00:17.43,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}Ela é toda {\i1}vazadinha{\i0}
-Dialogue: 0,0:00:16.39,0:00:17.43,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}Ela é toda {\i1}vazadinha{\i0}
-Dialogue: 0,0:00:16.39,0:00:17.43,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}Ela é toda {\i1}vazadinha{\i0}
-Dialogue: 1,0:00:16.39,0:00:17.43,T,,0,0,0,,{\an2\pos(540,1180)}Ela é toda {\i1}vazadinha{\i0}
-Dialogue: 0,0:00:17.43,0:00:18.97,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}e o short tem
-Dialogue: 0,0:00:17.43,0:00:18.97,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}e o short tem
-Dialogue: 0,0:00:17.43,0:00:18.97,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}e o short tem
-Dialogue: 1,0:00:17.43,0:00:18.97,T,,0,0,0,,{\an2\pos(540,1180)}e o short tem
-Dialogue: 0,0:00:18.97,0:00:20.47,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}forro em 100%
-Dialogue: 0,0:00:18.97,0:00:20.47,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}forro em 100%
-Dialogue: 0,0:00:18.97,0:00:20.47,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}forro em 100%
-Dialogue: 1,0:00:18.97,0:00:20.47,T,,0,0,0,,{\an2\pos(540,1180)}forro em 100%
-Dialogue: 0,0:00:20.47,0:00:20.72,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}dele.
-Dialogue: 0,0:00:20.47,0:00:20.72,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}dele.
-Dialogue: 0,0:00:20.47,0:00:20.72,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}dele.
-Dialogue: 1,0:00:20.47,0:00:20.72,T,,0,0,0,,{\an2\pos(540,1180)}dele.
-Dialogue: 0,0:00:21.64,0:00:22.00,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}olha,
-Dialogue: 0,0:00:21.64,0:00:22.00,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}olha,
-Dialogue: 0,0:00:21.64,0:00:22.00,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}olha,
-Dialogue: 1,0:00:21.64,0:00:22.00,T,,0,0,0,,{\an2\pos(540,1180)}olha,
-Dialogue: 0,0:00:22.00,0:00:23.38,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}com {\i1}lastex{\i0} aqui atrás,
-Dialogue: 0,0:00:22.00,0:00:23.38,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}com {\i1}lastex{\i0} aqui atrás,
-Dialogue: 0,0:00:22.00,0:00:23.38,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}com {\i1}lastex{\i0} aqui atrás,
-Dialogue: 1,0:00:22.00,0:00:23.38,T,,0,0,0,,{\an2\pos(540,1180)}com {\i1}lastex{\i0} aqui atrás,
-Dialogue: 0,0:00:23.38,0:00:23.88,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}Olha isso aqui.
-Dialogue: 0,0:00:23.38,0:00:23.88,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}Olha isso aqui.
-Dialogue: 0,0:00:23.38,0:00:23.88,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}Olha isso aqui.
-Dialogue: 1,0:00:23.38,0:00:23.88,T,,0,0,0,,{\an2\pos(540,1180)}Olha isso aqui.
-Dialogue: 0,0:00:26.62,0:00:28.10,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}A dúvida é cruel
-Dialogue: 0,0:00:26.62,0:00:28.10,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}A dúvida é cruel
-Dialogue: 0,0:00:26.62,0:00:28.10,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}A dúvida é cruel
-Dialogue: 1,0:00:26.62,0:00:28.10,T,,0,0,0,,{\an2\pos(540,1180)}A dúvida é cruel
-Dialogue: 0,0:00:28.10,0:00:28.66,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}aqui,
-Dialogue: 0,0:00:28.10,0:00:28.66,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}aqui,
-Dialogue: 0,0:00:28.10,0:00:28.66,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}aqui,
-Dialogue: 1,0:00:28.10,0:00:28.66,T,,0,0,0,,{\an2\pos(540,1180)}aqui,
-Dialogue: 0,0:00:28.66,0:00:28.74,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}hein?
-Dialogue: 0,0:00:28.66,0:00:28.74,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}hein?
-Dialogue: 0,0:00:28.66,0:00:28.74,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}hein?
-Dialogue: 1,0:00:28.66,0:00:28.74,T,,0,0,0,,{\an2\pos(540,1180)}hein?
-Dialogue: 0,0:00:28.74,0:00:29.90,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}O {\i1}vermelho{\i0} ou o
-Dialogue: 0,0:00:28.74,0:00:29.90,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}O {\i1}vermelho{\i0} ou o
-Dialogue: 0,0:00:28.74,0:00:29.90,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}O {\i1}vermelho{\i0} ou o
-Dialogue: 1,0:00:28.74,0:00:29.90,T,,0,0,0,,{\an2\pos(540,1180)}O {\i1}vermelho{\i0} ou o
-Dialogue: 0,0:00:29.90,0:00:30.36,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}{\i1}branco?{\i0}
-Dialogue: 0,0:00:29.90,0:00:30.36,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}{\i1}branco?{\i0}
-Dialogue: 0,0:00:29.90,0:00:30.36,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}{\i1}branco?{\i0}
-Dialogue: 1,0:00:29.90,0:00:30.36,T,,0,0,0,,{\an2\pos(540,1180)}{\i1}branco?{\i0}
-Dialogue: 0,0:00:30.36,0:00:31.50,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}O {\i1}branco{\i0} é {\i1}clássico,{\i0}
-Dialogue: 0,0:00:30.36,0:00:31.50,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}O {\i1}branco{\i0} é {\i1}clássico,{\i0}
-Dialogue: 0,0:00:30.36,0:00:31.50,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}O {\i1}branco{\i0} é {\i1}clássico,{\i0}
-Dialogue: 1,0:00:30.36,0:00:31.50,T,,0,0,0,,{\an2\pos(540,1180)}O {\i1}branco{\i0} é {\i1}clássico,{\i0}
-Dialogue: 0,0:00:31.50,0:00:31.70,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}gente,
-Dialogue: 0,0:00:31.50,0:00:31.70,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}gente,
-Dialogue: 0,0:00:31.50,0:00:31.70,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}gente,
-Dialogue: 1,0:00:31.50,0:00:31.70,T,,0,0,0,,{\an2\pos(540,1180)}gente,
-Dialogue: 0,0:00:31.70,0:00:32.74,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}pra vida toda.
-Dialogue: 0,0:00:31.70,0:00:32.74,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}pra vida toda.
-Dialogue: 0,0:00:31.70,0:00:32.74,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}pra vida toda.
-Dialogue: 1,0:00:31.70,0:00:32.74,T,,0,0,0,,{\an2\pos(540,1180)}pra vida toda.
-Dialogue: 0,0:00:32.74,0:00:33.90,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}É a mesma {\i1}modelagem{\i0}
-Dialogue: 0,0:00:32.74,0:00:33.90,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}É a mesma {\i1}modelagem{\i0}
-Dialogue: 0,0:00:32.74,0:00:33.90,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}É a mesma {\i1}modelagem{\i0}
-Dialogue: 1,0:00:32.74,0:00:33.90,T,,0,0,0,,{\an2\pos(540,1180)}É a mesma {\i1}modelagem{\i0}
-Dialogue: 0,0:00:33.90,0:00:34.68,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}do {\i1}vermelho,{\i0}
-Dialogue: 0,0:00:33.90,0:00:34.68,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}do {\i1}vermelho,{\i0}
-Dialogue: 0,0:00:33.90,0:00:34.68,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}do {\i1}vermelho,{\i0}
-Dialogue: 1,0:00:33.90,0:00:34.68,T,,0,0,0,,{\an2\pos(540,1180)}do {\i1}vermelho,{\i0}
-Dialogue: 0,0:00:34.68,0:00:35.38,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}o short e tanto
-Dialogue: 0,0:00:34.68,0:00:35.38,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}o short e tanto
-Dialogue: 0,0:00:34.68,0:00:35.38,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}o short e tanto
-Dialogue: 1,0:00:34.68,0:00:35.38,T,,0,0,0,,{\an2\pos(540,1180)}o short e tanto
-Dialogue: 0,0:00:35.38,0:00:36.03,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}a blusa.
-Dialogue: 0,0:00:35.38,0:00:36.03,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}a blusa.
-Dialogue: 0,0:00:35.38,0:00:36.03,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}a blusa.
-Dialogue: 1,0:00:35.38,0:00:36.03,T,,0,0,0,,{\an2\pos(540,1180)}a blusa.
-Dialogue: 0,0:00:36.03,0:00:37.01,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}Se quiser algum {\i1}link,{\i0}
-Dialogue: 0,0:00:36.03,0:00:37.01,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}Se quiser algum {\i1}link,{\i0}
-Dialogue: 0,0:00:36.03,0:00:37.01,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}Se quiser algum {\i1}link,{\i0}
-Dialogue: 1,0:00:36.03,0:00:37.01,T,,0,0,0,,{\an2\pos(540,1180)}Se quiser algum {\i1}link,{\i0}
-Dialogue: 0,0:00:37.01,0:00:37.71,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}pode pedir aqui nos
-Dialogue: 0,0:00:37.01,0:00:37.71,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}pode pedir aqui nos
-Dialogue: 0,0:00:37.01,0:00:37.71,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}pode pedir aqui nos
-Dialogue: 1,0:00:37.01,0:00:37.71,T,,0,0,0,,{\an2\pos(540,1180)}pode pedir aqui nos
-Dialogue: 0,0:00:37.71,0:00:38.37,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}comentários que eu te
-Dialogue: 0,0:00:37.71,0:00:38.37,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}comentários que eu te
-Dialogue: 0,0:00:37.71,0:00:38.37,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}comentários que eu te
-Dialogue: 1,0:00:37.71,0:00:38.37,T,,0,0,0,,{\an2\pos(540,1180)}comentários que eu te
-Dialogue: 0,0:00:38.37,0:00:39.03,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}envio com o {\i1}cupom{\i0}
-Dialogue: 0,0:00:38.37,0:00:39.03,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}envio com o {\i1}cupom{\i0}
-Dialogue: 0,0:00:38.37,0:00:39.03,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}envio com o {\i1}cupom{\i0}
-Dialogue: 1,0:00:38.37,0:00:39.03,T,,0,0,0,,{\an2\pos(540,1180)}envio com o {\i1}cupom{\i0}
-Dialogue: 0,0:00:39.03,0:00:39.65,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&}de desconto.
-Dialogue: 0,0:00:39.03,0:00:39.65,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&}de desconto.
-Dialogue: 0,0:00:39.03,0:00:39.65,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&}de desconto.
-Dialogue: 1,0:00:39.03,0:00:39.65,T,,0,0,0,,{\an2\pos(540,1180)}de desconto.
-Dialogue: 0,0:00:00.00,0:00:04.00,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}COMPRINHAS C&A\N{\fs18} \N{\fnPlayfair Display\fs108\fsp0}{\i1}Laise{\i0} pro verão
-Dialogue: 0,0:00:00.00,0:00:04.00,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}COMPRINHAS C&A\N{\fs18} \N{\fnPlayfair Display\fs108\fsp0}{\i1}Laise{\i0} pro verão
-Dialogue: 0,0:00:00.00,0:00:04.00,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}COMPRINHAS C&A\N{\fs18} \N{\fnPlayfair Display\fs108\fsp0}{\i1}Laise{\i0} pro verão
+Dialogue: 0,0:00:05.12,0:00:06.38,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}foca nisso aqui,
+Dialogue: 1,0:00:05.12,0:00:06.38,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}foca nisso aqui,
+Dialogue: 0,0:00:06.38,0:00:06.86,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}{\i1}Laise,{\i0}
+Dialogue: 1,0:00:06.38,0:00:06.86,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}{\i1}Laise,{\i0}
+Dialogue: 0,0:00:06.86,0:00:07.20,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}gente,
+Dialogue: 1,0:00:06.86,0:00:07.20,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}gente,
+Dialogue: 0,0:00:07.20,0:00:08.80,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}com shortinho pegado
+Dialogue: 1,0:00:07.20,0:00:08.80,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}com shortinho pegado
+Dialogue: 0,0:00:08.80,0:00:09.46,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}{\i1}alfaiatado,{\i0}
+Dialogue: 1,0:00:08.80,0:00:09.46,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}{\i1}alfaiatado,{\i0}
+Dialogue: 0,0:00:09.46,0:00:10.99,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}100% {\i1}forrado.{\i0}
+Dialogue: 1,0:00:09.46,0:00:10.99,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}100% {\i1}forrado.{\i0}
+Dialogue: 0,0:00:10.99,0:00:12.09,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}A camisa de botão,
+Dialogue: 1,0:00:10.99,0:00:12.09,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}A camisa de botão,
+Dialogue: 0,0:00:12.09,0:00:13.29,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}peguei tamanho {\i1}PP{\i0} pra
+Dialogue: 1,0:00:12.09,0:00:13.29,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}peguei tamanho {\i1}PP{\i0} pra
+Dialogue: 0,0:00:13.29,0:00:14.13,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}ficar mais sequinha no
+Dialogue: 1,0:00:13.29,0:00:14.13,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}ficar mais sequinha no
+Dialogue: 0,0:00:14.13,0:00:15.05,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}corpo e ficou ótima
+Dialogue: 1,0:00:14.13,0:00:15.05,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}corpo e ficou ótima
+Dialogue: 0,0:00:15.05,0:00:15.99,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}no comprimento também.
+Dialogue: 1,0:00:15.05,0:00:15.99,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}no comprimento também.
+Dialogue: 0,0:00:16.39,0:00:17.43,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}Ela é toda {\i1}vazadinha{\i0}
+Dialogue: 1,0:00:16.39,0:00:17.43,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}Ela é toda {\i1}vazadinha{\i0}
+Dialogue: 0,0:00:17.43,0:00:18.97,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}e o short tem
+Dialogue: 1,0:00:17.43,0:00:18.97,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}e o short tem
+Dialogue: 0,0:00:18.97,0:00:20.47,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}forro em 100%
+Dialogue: 1,0:00:18.97,0:00:20.47,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}forro em 100%
+Dialogue: 0,0:00:20.47,0:00:20.72,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}dele.
+Dialogue: 1,0:00:20.47,0:00:20.72,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}dele.
+Dialogue: 0,0:00:21.64,0:00:22.00,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}olha,
+Dialogue: 1,0:00:21.64,0:00:22.00,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}olha,
+Dialogue: 0,0:00:22.00,0:00:23.38,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}com {\i1}lastex{\i0} aqui atrás,
+Dialogue: 1,0:00:22.00,0:00:23.38,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}com {\i1}lastex{\i0} aqui atrás,
+Dialogue: 0,0:00:23.38,0:00:23.88,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}Olha isso aqui.
+Dialogue: 1,0:00:23.38,0:00:23.88,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}Olha isso aqui.
+Dialogue: 0,0:00:26.62,0:00:28.10,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}A dúvida é cruel
+Dialogue: 1,0:00:26.62,0:00:28.10,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}A dúvida é cruel
+Dialogue: 0,0:00:28.10,0:00:28.66,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}aqui,
+Dialogue: 1,0:00:28.10,0:00:28.66,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}aqui,
+Dialogue: 0,0:00:28.66,0:00:28.74,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}hein?
+Dialogue: 1,0:00:28.66,0:00:28.74,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}hein?
+Dialogue: 0,0:00:28.74,0:00:29.90,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}O {\i1}vermelho{\i0} ou o
+Dialogue: 1,0:00:28.74,0:00:29.90,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}O {\i1}vermelho{\i0} ou o
+Dialogue: 0,0:00:29.90,0:00:30.36,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}{\i1}branco?{\i0}
+Dialogue: 1,0:00:29.90,0:00:30.36,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}{\i1}branco?{\i0}
+Dialogue: 0,0:00:30.36,0:00:31.50,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}O {\i1}branco{\i0} é {\i1}clássico,{\i0}
+Dialogue: 1,0:00:30.36,0:00:31.50,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}O {\i1}branco{\i0} é {\i1}clássico,{\i0}
+Dialogue: 0,0:00:31.50,0:00:31.70,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}gente,
+Dialogue: 1,0:00:31.50,0:00:31.70,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}gente,
+Dialogue: 0,0:00:31.70,0:00:32.74,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}pra vida toda.
+Dialogue: 1,0:00:31.70,0:00:32.74,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}pra vida toda.
+Dialogue: 0,0:00:32.74,0:00:33.90,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}É a mesma {\i1}modelagem{\i0}
+Dialogue: 1,0:00:32.74,0:00:33.90,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}É a mesma {\i1}modelagem{\i0}
+Dialogue: 0,0:00:33.90,0:00:34.68,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}do {\i1}vermelho,{\i0}
+Dialogue: 1,0:00:33.90,0:00:34.68,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}do {\i1}vermelho,{\i0}
+Dialogue: 0,0:00:34.68,0:00:35.38,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}o short e tanto
+Dialogue: 1,0:00:34.68,0:00:35.38,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}o short e tanto
+Dialogue: 0,0:00:35.38,0:00:36.03,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}a blusa.
+Dialogue: 1,0:00:35.38,0:00:36.03,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}a blusa.
+Dialogue: 0,0:00:36.03,0:00:37.01,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}Se quiser algum {\i1}link,{\i0}
+Dialogue: 1,0:00:36.03,0:00:37.01,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}Se quiser algum {\i1}link,{\i0}
+Dialogue: 0,0:00:37.01,0:00:37.71,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}pode pedir aqui nos
+Dialogue: 1,0:00:37.01,0:00:37.71,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}pode pedir aqui nos
+Dialogue: 0,0:00:37.71,0:00:38.37,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}comentários que eu te
+Dialogue: 1,0:00:37.71,0:00:38.37,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}comentários que eu te
+Dialogue: 0,0:00:38.37,0:00:39.03,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}envio com o {\i1}cupom{\i0}
+Dialogue: 1,0:00:38.37,0:00:39.03,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}envio com o {\i1}cupom{\i0}
+Dialogue: 0,0:00:39.03,0:00:39.65,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&}{\fnMontserrat SemiBold}de desconto.
+Dialogue: 1,0:00:39.03,0:00:39.65,T,,0,0,0,,{\an2\pos(540,1180)}{\fnMontserrat SemiBold}de desconto.
+Dialogue: 0,0:00:00.00,0:00:04.00,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}COMPRINHAS C&A\N{\fs18} \N{\fnPlayfair Display\fs108\fsp0}{\i1}Laise{\i0} pro verão
 Dialogue: 1,0:00:00.00,0:00:04.00,T,,0,0,0,,{\an2\pos(540,1180)\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}COMPRINHAS C&A\N{\fs18} \N{\fnPlayfair Display\fs108\fsp0}{\i1}Laise{\i0} pro verão
-Dialogue: 0,0:00:04.00,0:00:10.95,T,,0,0,0,,{\an2\pos(540,1095)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}FRAN · 1,64 M · CAMISA PP
-Dialogue: 0,0:00:04.00,0:00:10.95,T,,0,0,0,,{\an2\pos(544,1103)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}FRAN · 1,64 M · CAMISA PP
-Dialogue: 0,0:00:04.00,0:00:10.95,T,,0,0,0,,{\an2\pos(541,1097)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}FRAN · 1,64 M · CAMISA PP
+Dialogue: 0,0:00:04.00,0:00:10.95,T,,0,0,0,,{\an2\pos(542,1098)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}FRAN · 1,64 M · CAMISA PP
 Dialogue: 1,0:00:04.00,0:00:10.95,T,,0,0,0,,{\an2\pos(540,1095)\fad(180,120)}{\fnPlayfair Display SemiBold\fs40\fsp6}FRAN · 1,64 M · CAMISA PP
-Dialogue: 0,0:00:04.00,0:00:42.15,T,,0,0,0,,{\an2\pos(540,1255)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&\fad(180,120)}{\fnPlayfair Display SemiBold\fs38\fsp6}COMENTA QUERO
-Dialogue: 0,0:00:04.00,0:00:42.15,T,,0,0,0,,{\an2\pos(544,1263)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&\fad(180,120)}{\fnPlayfair Display SemiBold\fs38\fsp6}COMENTA QUERO
-Dialogue: 0,0:00:04.00,0:00:42.15,T,,0,0,0,,{\an2\pos(541,1257)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&\fad(180,120)}{\fnPlayfair Display SemiBold\fs38\fsp6}COMENTA QUERO
-Dialogue: 1,0:00:04.00,0:00:42.15,T,,0,0,0,,{\an2\pos(540,1255)\fad(180,120)}{\fnPlayfair Display SemiBold\fs38\fsp6}COMENTA QUERO
-Dialogue: 0,0:00:39.67,0:00:42.15,T,,0,0,0,,{\an2\pos(540,1180)\bord8\3c&H000000&\3a&H50&\blur10\1c&H000000&\1a&H50&\fad(180,120)}{\fs104}{\i1}Vermelho{\i0} ou {\i1}branco{\i0}?
-Dialogue: 0,0:00:39.67,0:00:42.15,T,,0,0,0,,{\an2\pos(544,1188)\bord0\3c&H000000&\3a&H30&\blur20\1c&H000000&\1a&H30&\fad(180,120)}{\fs104}{\i1}Vermelho{\i0} ou {\i1}branco{\i0}?
-Dialogue: 0,0:00:39.67,0:00:42.15,T,,0,0,0,,{\an2\pos(541,1182)\bord0\3c&H000000&\3a&H60&\blur2\1c&H000000&\1a&H60&\fad(180,120)}{\fs104}{\i1}Vermelho{\i0} ou {\i1}branco{\i0}?
+Dialogue: 0,0:00:36.03,0:00:39.67,T,,0,0,0,,{\an2\pos(542,1088)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&\fad(180,120)}{\fnMontserrat Medium\fs50}Comenta {\fnMontserrat ExtraBold\fs84}QUERO
+Dialogue: 1,0:00:36.03,0:00:39.67,T,,0,0,0,,{\an2\pos(540,1085)\fad(180,120)}{\fnMontserrat Medium\fs50}Comenta {\fnMontserrat ExtraBold\fs84}QUERO
+Dialogue: 0,0:00:39.67,0:00:42.15,T,,0,0,0,,{\an2\pos(542,1183)\bord0\3c&H000000&\3a&HA0&\blur3\1c&H000000&\1a&HA0&\fad(180,120)}{\fs104}{\i1}Vermelho{\i0} ou {\i1}branco{\i0}?
 Dialogue: 1,0:00:39.67,0:00:42.15,T,,0,0,0,,{\an2\pos(540,1180)\fad(180,120)}{\fs104}{\i1}Vermelho{\i0} ou {\i1}branco{\i0}?

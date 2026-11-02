@@ -653,9 +653,10 @@
   },
   {
    "tipo": "cta",
-   "de": 4.0,
-   "ate": 42.15,
-   "texto": "COMENTA QUERO"
+   "de": 36.03,
+   "ate": 39.67,
+   "texto": "Comenta QUERO",
+   "nota": "só enquanto ela pede o link"
   },
   {
    "tipo": "final",

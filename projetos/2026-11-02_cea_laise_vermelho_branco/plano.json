@@ -1,0 +1,117 @@
+{
+ "_origem": "Conjunto de laise da C&A (camisa + short), vermelho e branco. Bruto de 98,5 s enviado em 02/11.",
+ "trechos": [
+  {
+   "de": 0.0,
+   "ate": 4.4,
+   "vel": 1.1,
+   "nota": "abertura com a sacola: 'short de verão na laise que a C&A fez, vou colocar no corpo' (corta 'me conta se você...')"
+  },
+  {
+   "de": 5.3,
+   "ate": 12.25,
+   "vel": 1.0,
+   "nota": "vermelho vestido: laise, short alfaiatado, 100% forrado"
+  },
+  {
+   "de": 16.4,
+   "ate": 26.05,
+   "vel": 1.0,
+   "nota": "camisa PP com motivo, vazadinha, forro do short (corta 'look super lindo, elegante, arrumado')"
+  },
+  {
+   "de": 37.9,
+   "ate": 40.55,
+   "vel": 1.0,
+   "nota": "giro de costas + lastex (2ª tomada; a 1ª, em 31 s, mostra menos as costas)"
+  },
+  {
+   "de": 52.55,
+   "ate": 55.1,
+   "vel": 1.0,
+   "nota": "'olha isso aqui' + close da laise na manga (corta as 2 repetições de 'elegante e arrumada no verão' e o corredor vazio)"
+  },
+  {
+   "de": 61.8,
+   "ate": 71.95,
+   "vel": 1.0,
+   "nota": "branco: a dúvida, clássico, mesma modelagem (corta regata Mindset, jeans e 'agrega elegância')"
+  },
+  {
+   "de": 90.9,
+   "ate": 97.1,
+   "vel": 1.0,
+   "nota": "pedido de link + escolha vermelho ou branco"
+  }
+ ],
+ "cortar_pausas_acima_s": 0.4,
+ "textos": [
+  {
+   "tipo": "gancho",
+   "de": 0.0,
+   "ate": 4.4,
+   "texto": "COMPRINHAS C&A | *Laise* pro verão"
+  },
+  {
+   "tipo": "rotulo",
+   "de": 5.3,
+   "ate": 12.25,
+   "texto": "FRAN · 1,64 M · CAMISA PP"
+  },
+  {
+   "tipo": "cta",
+   "de": 5.3,
+   "ate": "fim",
+   "texto": "COMENTA QUERO"
+  },
+  {
+   "tipo": "final",
+   "de": 94.62,
+   "ate": "fim",
+   "texto": "*Vermelho* ou *branco*?"
+  }
+ ],
+ "zooms": [
+  {
+   "de": 10.7,
+   "ate": 12.25,
+   "nota": "100% forrado"
+  },
+  {
+   "de": 21.8,
+   "ate": 23.3,
+   "nota": "toda vazadinha"
+  },
+  {
+   "de": 68.7,
+   "ate": 70.6,
+   "nota": "mesma modelagem"
+  }
+ ],
+ "destaques": [
+  "laise",
+  "c&a",
+  "alfaiatado",
+  "forrado",
+  "pp",
+  "vazadinha",
+  "lastex",
+  "clássico",
+  "modelagem",
+  "link",
+  "cupom",
+  "vermelho",
+  "branco"
+ ],
+ "correcoes": {
+  "c": "C&A",
+  "&a": "",
+  "as": "",
+  "tex": "lastex",
+  "lese": "laise",
+  "vi": "envio",
+  "um": "",
+  "pouco": "com",
+  "pão": "cupom"
+ }
+}

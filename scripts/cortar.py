@@ -109,6 +109,8 @@ def main(projeto):
         nucleo = p.strip(".,!?…").lower()
         if nucleo in corr:
             p = p.lower().replace(nucleo, corr[nucleo])
+            if not p.strip(".,!?…"):  # correção vazia: a palavra sai da legenda
+                continue
             p = p[0].upper() + p[1:] if w["p"][:1].isupper() else p
         novas.append({"i": i, "f": max(f, i + 0.08), "p": p})
     textos = []

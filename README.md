@@ -53,4 +53,14 @@ scripts/render_remotion.sh projetos/<nome>          # versão B
   - Foi testado com um vídeo sintético que mostra o tempo do bruto na tela, para conferir os cortes.
   - **Falta o bruto real.**
 
+- `projetos/2026-11-02_cea_laise_vermelho_branco/`: conjunto de laise da C&A (camisa + short) em vermelho e branco. 98,5 s → 42 s, renderizado na versão luxo.
+
+### Versão luxo (`render_luxo.py`, pedida pela Fran em 02/11)
+- Fonte serifada (Playfair Display), só branco com sombra preta suave, sem cor e sem animação na legenda.
+- Palavra-chave em itálico; nos textos do plano, `*assim*` vira itálico e o gancho usa `SOBRETÍTULO | título`.
+- Gancho e texto final escondem a legenda enquanto estão na tela.
+- Estilo em `estilo_luxo.json`.
+- **Fontes:** `npm i @fontsource/playfair-display` e converter os `.woff2` para `.ttf` em `~/.fonts` (fontTools).
+- `python3 scripts/render_luxo.py projetos/<nome>` (depois do `cortar.py`).
+
 Pesquisa de ferramentas e técnicas: `pesquisa/2026-10-31_ferramentas_e_tecnicas.md`.

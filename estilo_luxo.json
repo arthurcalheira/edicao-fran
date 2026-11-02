@@ -1,0 +1,54 @@
+{
+ "_nota": "Visual 'luxo' pedido pela Fran em 02/11: serifado, só preto e branco, sombra suave, legenda sem animação. Destaque = itálico, não cor.",
+ "fonte": "Playfair Display",
+ "fonte_caixa_alta": "Playfair Display SemiBold",
+ "legenda": {
+  "tamanho": 74,
+  "y_base": 1180,
+  "palavras_por_bloco": 4
+ },
+ "gancho": {
+  "tamanho_sup": 40,
+  "tamanho": 108,
+  "y_base": 1180
+ },
+ "final": {
+  "tamanho": 104,
+  "y_base": 1180
+ },
+ "rotulo": {
+  "tamanho": 40,
+  "y_base": 1095
+ },
+ "cta": {
+  "tamanho": 38,
+  "y_base": 1255
+ },
+ "espacamento_caixa_alta": 6,
+ "sombra": [
+  {
+   "dx": 0,
+   "dy": 0,
+   "blur": 10,
+   "alfa": "50",
+   "bord": 8
+  },
+  {
+   "dx": 4,
+   "dy": 8,
+   "blur": 20,
+   "alfa": "30"
+  },
+  {
+   "dx": 1,
+   "dy": 2,
+   "blur": 2,
+   "alfa": "60"
+  }
+ ],
+ "fade_ms": [
+  180,
+  120
+ ],
+ "zoom_padrao": 1.1
+}

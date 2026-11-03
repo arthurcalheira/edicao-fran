@@ -33,6 +33,12 @@ Toda correção nova que a Fran fizer entra aqui na mesma hora, com data, para n
   - Não usar o zoom seco (punch-in).
 - **Janelas** de cerca de 1,5 a 3,5 s, de 3 a 5 por vídeo, marcadas em `zooms` no `plano.json`.
 
+## Stickers e aprovação (03/11/2026)
+- **Sticker é sticker "aesthetic", não emoji.** Nada de Fluent Emoji, Twemoji ou parecidos. O estilo é de Pinterest/Instagram: laço coquette, enfeite vintage, azevinho em aquarela, estrela com glitter.
+- **Nada de editar, baixar asset ou montar kit antes de a Fran aprovar.** Primeiro mostrar as opções (folha com as imagens), esperar o "pode" e só depois seguir. Quando ela diz "não edita ainda", só preparar (baixar o bruto, transcrever) e perguntar.
+- **Vídeos de Natal e achadinhos podem ter cor.** O preto e branco vale para os Reels de provador. Para o CapCut (Mac), entregar um kit: vídeo cortado, legenda .srt, PNGs e roteiro de tempos.
+- **Introdução:** stickers que trocam a cada 0,5 s (stop-motion), gerados por `scripts/stickers_intro.py`. A pasta de stickers vai ser definida depois da aprovação.
+
 ## Conferência antes de entregar
 1. Fazer a grade de quadros com o tempo na tela (`drawtext`, 2 a 4 quadros por segundo) e olhar:
    - os trechos sem fala;

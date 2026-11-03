@@ -1,0 +1,33 @@
+{
+ "_nota": "Aprovado pela Fran em 03/11: abertura do IMG_7969, prato de tomate como 2º gancho, ressalva da cerâmica, pratos fundos e Snoopy ficam. Só trechos falados.",
+ "fontes": {"abertura": ["abertura.mov", "transcricao_abertura.json"], "bruto": ["bruto.mov", "transcricao.json"]},
+ "pausa_max_s": 0.3,
+ "gancho": {"linhas": [["Achadinhos", "#EE8E9C", 185, true], ["de Natal", "#7FC497", 150, false]], "trechos": [0]},
+ "trechos": [
+  {"fonte": "abertura", "de": 39.40, "ate": 41.86, "nota": "Achadinhos de Natal da Farm"},
+  {"fonte": "abertura", "de": 42.98, "ate": 45.36, "nota": "Pega a pipoca que eu vou te mostrar tudo que tem aqui"},
+  {"fonte": "bruto", "de": 563.0, "ate": 568.9, "nota": "2º gancho: vai esgotar super rápido, a cara do verão europeu (prato de tomate)"},
+  {"fonte": "bruto", "de": 63.6, "ate": 73.7, "rotulo": "Lata organizadora", "sticker": "B16_azevinho", "zoom": [66.4, 68.9]},
+  {"fonte": "bruto", "de": 83.3, "ate": 91.0, "rotulo": "Descansadores de cerâmica"},
+  {"fonte": "bruto", "de": 129.3, "ate": 133.4, "rotulo": "Abridor de coqueiro"},
+  {"fonte": "bruto", "de": 166.0, "ate": 168.9, "rotulo": "Kit 2 bowls", "sticker": "B3_biscoito_gengibre", "zoom": [166.0, 168.7]},
+  {"fonte": "bruto", "de": 213.9, "ate": 220.0},
+  {"fonte": "bruto", "de": 206.2, "ate": 208.95},
+  {"fonte": "bruto", "de": 251.4, "ate": 255.3},
+  {"fonte": "bruto", "de": 302.7, "ate": 313.9, "rotulo": "Kit 2 pratos fundos", "sticker": "D3_gatinho_arvore", "zoom": [305.0, 307.4]},
+  {"fonte": "bruto", "de": 352.1, "ate": 356.0, "rotulo": "Kit 2 pratos de sobremesa", "sticker": "A12_boneco_neve"},
+  {"fonte": "bruto", "de": 360.5, "ate": 363.0},
+  {"fonte": "bruto", "de": 536.1, "ate": 541.1},
+  {"fonte": "bruto", "de": 417.8, "ate": 423.0, "rotulo": "Pratos de jantar", "sticker": "B9_meia", "zoom": [418.5, 421.2]},
+  {"fonte": "bruto", "de": 438.8, "ate": 446.1},
+  {"fonte": "bruto", "de": 471.3, "ate": 473.5, "rotulo": "Trio de canetas", "sticker": "D8_gatinho_elfo", "zoom": [471.3, 473.4]},
+  {"fonte": "bruto", "de": 498.9, "ate": 505.7},
+  {"fonte": "bruto", "de": 700.4, "ate": 706.7, "rotulo": "Caderneta + porta-caneta", "sticker": "C12_snoopy_presente"},
+  {"fonte": "bruto", "de": 712.8, "ate": 715.1, "nota": "corta 'lindíssima'"},
+  {"fonte": "bruto", "de": 716.0, "ate": 716.9},
+  {"fonte": "bruto", "de": 724.2, "ate": 726.2},
+  {"fonte": "bruto", "de": 792.7, "ate": 798.5, "cta": {"de": 796.0, "texto": "Comenta QUERO"}, "sticker": "C8_snoopy_boneco_neve"}
+ ],
+ "destaques": ["farm", "farm.", "cerâmica", "cerâmica.", "coqueiro", "bowls", "legumes", "douradinha", "dourada", "sobremesa", "verde", "rosa", "jantar", "canetas", "couro", "pautado", "presente", "secreto", "link", "fundos", "organizador", "estampadas", "estampada", "esgotar"],
+ "correcoes": {"cinzinha": "sendo", "poderá": "poderia", "bols": "bowls", "coisas": "cores", "farm": "Farm", "resistentezinho": "resistente"}
+}

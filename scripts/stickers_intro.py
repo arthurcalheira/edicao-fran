@@ -1,8 +1,8 @@
 """Efeito de introdução: stickers parados que mexem de leve a cada meio segundo (stop-motion).
 
 Pedido da Fran (03/11/2026): os stickers NÃO trocam. Os mesmos ficam na tela o tempo todo
-da introdução e, a cada passo (0,5 s), giram um pouco, deslocam alguns pixels e mudam
-levemente de tamanho, como um adesivo animado quadro a quadro.
+da introdução e, a cada passo (0,5 s), só mudam um pouco o ângulo (rotação), como um adesivo
+animado quadro a quadro. Posição e tamanho ficam fixos.
 
 Uso: python3 scripts/stickers_intro.py projetos/<nome> [duracao_s] [passo_s]
 Lê <projeto>/layout_intro.json:
@@ -20,7 +20,7 @@ import sys
 
 from PIL import Image
 
-MEXE = {"desloca_px": 7, "giro_graus": 4, "escala": 0.03}  # "leve movimento"
+MEXE = {"desloca_px": 0, "giro_graus": 6, "escala": 0.0}  # Fran (03/11): só gira; não anda em x/y nem muda de tamanho
 
 
 def main(projeto, duracao=3.0, passo=0.5, semente=7):

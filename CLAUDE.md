@@ -30,6 +30,9 @@ Toda correção nova que a Fran fizer entra aqui na mesma hora, com data, para n
 
 - **(03/11) No vídeo só entram as partes em que ela está falando.** Cortar ao máximo os silêncios: pausas, abrir caixa calada, conversa com quem filma. Isso vale também para a abertura.
 
+- **(03/11) Falas cortadas e respiros:** os tempos de palavra do faster-whisper saem **adiantados** (começo ~0,3 s antes, fim ~0,15 s antes), então cortar pelo tempo da transcrição corta o fim das palavras. Os cortes usam o **detector de voz (VAD Silero)**: borda de cada trecho = onde a voz começa/termina de verdade (+0,10 s antes, +0,07 s depois); respiros e silêncios > 0,12 s entre falas saem; entre uma fala que fica e outra que sai, coladas, corta no ponto mais silencioso. A legenda é deslocada +0,25 s.
+- **Conferência obrigatória dos cortes:** transcrever cada pedaço cortado e conferir que começa e termina em palavra inteira, sem sobra da frase vizinha.
+
 ## Zoom (02/11/2026)
 - **Quando ela mostra a peça** (tecido, forro, lastex, modelagem, short, blusa), usar o zoom **"vai e volta"**: entra moderado (até cerca de 18%) e volta suave.
   - Não usar o zoom seco (punch-in).

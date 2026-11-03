@@ -1,6 +1,8 @@
 """Monta um Reel de Natal/achadinhos a partir de mais de um arquivo bruto (só trechos falados).
 
-Uso: python3 scripts/montar_natal.py projetos/<nome>
+Uso: python3 scripts/montar_natal.py projetos/<nome> [--reusar-base] [--kit]
+  --reusar-base  não refaz os cortes (usa saida/base_cortes.mp4)
+  --kit          também gera capcut/base_capcut.mp4 (a Fran não usa; padrão é só o final.mp4)
 Lê <projeto>/plano.json (fontes, trechos, gancho, rótulos, stickers, zooms, CTA, destaques, correções),
 <projeto>/layout_intro.json e os stickers aprovados em <projeto>/stickers/.
 
@@ -24,6 +26,7 @@ import shutil
 import subprocess
 import sys
 
+import numpy as np
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(__file__))
@@ -36,6 +39,7 @@ LEG = {"fonte": "Montserrat SemiBold", "tam": 74, "y": 1180}
 ROTULO = {"y": 360, "tam": 80, "cor": "#EE8E9C", "dur": 2.6}
 STICKER_ITEM = {"x": 540, "y": 215, "lado": 150, "dur": 2.6}
 PASSO = 0.5  # stickers mexem (só rotação) a cada meio segundo
+ATRASO = 0.25  # a transcrição sai adiantada ~0,25 s em relação à voz real (medido com o VAD em 03/11)
 
 
 def bgr(h):
@@ -53,20 +57,76 @@ def srt_ts(t):
     return f"{ms // 3600000:02d}:{ms // 60000 % 60:02d}:{ms // 1000 % 60:02d},{ms % 1000:03d}"
 
 
-def pedacos(plano, palavras):
-    """Cada trecho vira pedaços só com fala: encosta nas palavras e tira pausas longas."""
-    lim, folga_i, folga_f = plano.get("pausa_max_s", 0.3), 0.08, 0.12
+def carregar_audio(arq):
+    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", arq, "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
+                         capture_output=True, check=True).stdout
+    return np.frombuffer(pcm, dtype=np.float32)
+
+
+def vad(projeto, fonte, audio):
+    """Trechos de voz (Silero, via faster-whisper). Respiro e silêncio ficam de fora. Cache em vad_<fonte>.json."""
+    cache = os.path.join(projeto, f"vad_{fonte}.json")
+    if os.path.exists(cache):
+        return json.load(open(cache))
+    from faster_whisper.vad import VadOptions, get_speech_timestamps
+    ts_ = get_speech_timestamps(audio, VadOptions(threshold=0.5, min_silence_duration_ms=120, speech_pad_ms=30,
+                                                  min_speech_duration_ms=120))
+    reg = [(round(t["start"] / 16000, 3), round(t["end"] / 16000, 3)) for t in ts_]
+    json.dump(reg, open(cache, "w"))
+    return reg
+
+
+def vale(audio, t0, t1):
+    """Instante mais silencioso (janela de 20 ms) entre t0 e t1: onde cortar entre duas falas coladas."""
+    if t1 <= t0:
+        return t0
+    q = 160  # 10 ms
+    a, b = int(t0 * 16000), int(t1 * 16000)
+    seg = audio[a:b]
+    if len(seg) < 2 * q:
+        return (t0 + t1) / 2
+    e = np.array([np.sqrt((seg[k:k + 2 * q] ** 2).mean()) for k in range(0, len(seg) - 2 * q, q)])
+    return (a + int(e.argmin()) * q + q) / 16000
+
+
+def pedacos(plano, palavras, projeto):
+    """Cada trecho vira pedaços só com voz.
+
+    Os tempos da transcrição (faster-whisper) saem adiantados: o começo da fala vem ~0,3 s antes do real
+    e o fim ~0,15 s antes. Por isso as bordas e as pausas vêm do detector de voz (VAD), e a transcrição
+    só diz quais falas entram. Entre uma fala que fica e outra que sai, coladas, o corte vai no vale de
+    energia. Respiros e silêncios maiores que 0,12 s entre as falas saem.
+    """
+    PAD_INI, PAD_FIM, GAP = 0.10, 0.07, 0.12
+    audios = {f: carregar_audio(os.path.join(projeto, plano["fontes"][f][0])) for f in plano["fontes"]}
+    regs = {f: vad(projeto, f, audios[f]) for f in plano["fontes"]}
     out = []
     for k, tr in enumerate(plano["trechos"]):
-        ws = [w for w in palavras[tr["fonte"]] if tr["de"] - 0.05 <= w["i"] < tr["ate"]]
-        if not ws:
+        f, W = tr["fonte"], palavras[tr["fonte"]]
+        idx = [j for j, w in enumerate(W) if tr["de"] - 0.05 <= w["i"] < tr["ate"]]
+        if not idx:
             continue
-        a = max(tr["de"], ws[0]["i"] - folga_i)
-        for w0, w1 in zip(ws, ws[1:]):
-            if w1["i"] - w0["f"] > lim:
-                out.append({"tr": k, "fonte": tr["fonte"], "a": a, "b": min(w0["f"] + folga_f, tr["ate"])})
-                a = w1["i"] - folga_i
-        out.append({"tr": k, "fonte": tr["fonte"], "a": a, "b": min(ws[-1]["f"] + folga_f, tr["ate"])})
+        w0, w1 = W[idx[0]], W[idx[-1]]
+        ant = W[idx[0] - 1] if idx[0] > 0 else None
+        prox = W[idx[-1] + 1] if idx[-1] + 1 < len(W) else None
+        # limites: não invadir a fala de fora que vem antes/depois
+        lo = w0["i"] - 0.15
+        if ant and w0["i"] - ant["f"] < 0.6:
+            lo = vale(audios[f], ant["f"] + 0.05, w0["i"] + 0.3)
+        hi = w1["f"] + 0.6
+        if prox and prox["i"] - w1["f"] < 0.9:
+            hi = vale(audios[f], w1["f"], prox["i"] + 0.2)
+        vozes = [(max(a - PAD_INI, lo), min(b + PAD_FIM, hi)) for a, b in regs[f] if b > lo and a < hi]
+        vozes = [(a, b) for a, b in vozes if b - a > 0.08]
+        # junta vozes separadas por menos de GAP; o resto (respiro, silêncio) sai
+        junt = []
+        for a, b in vozes:
+            if junt and a - junt[-1][1] < GAP:
+                junt[-1] = (junt[-1][0], b)
+            else:
+                junt.append((a, b))
+        for a, b in junt:
+            out.append({"tr": k, "fonte": f, "a": round(a, 3), "b": round(b, 3)})
     t = 0.0
     for p in out:
         p["ini"], t = t, t + (p["b"] - p["a"])
@@ -90,7 +150,7 @@ def main(projeto):
     plano = json.load(open(os.path.join(projeto, "plano.json")))
     fontes = list(plano["fontes"])
     palavras = {f: json.load(open(os.path.join(projeto, plano["fontes"][f][1])))["palavras"] for f in fontes}
-    pcs = pedacos(plano, palavras)
+    pcs = pedacos(plano, palavras, projeto)
     dur = round(pcs[-1]["fim"], 3)
     saida = os.path.join(projeto, "saida")
     kit = os.path.join(saida, "capcut")
@@ -118,7 +178,8 @@ def main(projeto):
     zooms = []
     for k, tr in enumerate(plano["trechos"]):
         if "zoom" in tr:
-            a, b = mapa(pcs, tr["fonte"], tr["zoom"][0], k), mapa(pcs, tr["fonte"], tr["zoom"][1] - 0.01, k)
+            a = mapa(pcs, tr["fonte"], tr["zoom"][0] + ATRASO, k)
+            b = mapa(pcs, tr["fonte"], tr["zoom"][1] + ATRASO - 0.01, k)
             if a is None:
                 a = janela_trecho(pcs, k)[0]
             if b is None:
@@ -156,7 +217,7 @@ def main(projeto):
         if not jan:
             continue
         if "cta" in tr:
-            c0 = mapa(pcs, tr["fonte"], tr["cta"]["de"], k) or jan[0]
+            c0 = mapa(pcs, tr["fonte"], tr["cta"]["de"] + ATRASO, k) or jan[0]
             ctas.append((c0, jan[1], tr["cta"]["texto"]))
             if "sticker" in tr:
                 itens.append((c0, jan[1], tr["sticker"], 880, 500, 170, 8))
@@ -236,14 +297,15 @@ def main(projeto):
     novas = []
     for p in pcs:
         for w in palavras[p["fonte"]]:
-            if p["a"] <= w["i"] < p["b"]:
+            wi, wf = w["i"] + ATRASO, w["f"] + ATRASO
+            if p["a"] - 0.05 <= wi < p["b"]:
                 txt = w["p"]
                 nucleo = txt.strip(".,!?…").lower()
                 if nucleo in corr:
                     novo = txt.lower().replace(nucleo, corr[nucleo])
                     txt = novo[0].upper() + novo[1:] if txt[:1].isupper() else novo
-                i = p["ini"] + w["i"] - p["a"]
-                f = p["ini"] + min(w["f"], p["b"]) - p["a"]
+                i = p["ini"] + max(wi - p["a"], 0)
+                f = p["ini"] + min(wf, p["b"]) - p["a"]
                 novas.append({"i": round(i, 3), "f": round(max(f, i + 0.08), 3), "p": txt})
     leg_ev, srt = [], []
     for b in blocos(novas, 4, max_dur=1.8):
@@ -301,7 +363,8 @@ def main(projeto):
                        check=True)
 
     render(os.path.join(saida, "final.mp4"), ass_final, True)
-    render(os.path.join(kit, "base_capcut.mp4"), ass_gancho, False)
+    if "--kit" in sys.argv:  # a Fran não usa kit do CapCut (03/11); só com --kit
+        render(os.path.join(kit, "base_capcut.mp4"), ass_gancho, False)
 
     # ---------- 6. roteiro ----------
     r = ["# Roteiro para o CapCut (Mac)", "",

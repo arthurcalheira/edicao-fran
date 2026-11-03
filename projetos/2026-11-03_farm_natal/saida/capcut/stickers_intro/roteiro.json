@@ -1,0 +1,72 @@
+[
+ {
+  "arquivo": "intro_01.png",
+  "de": 0.0,
+  "ate": 0.5,
+  "stickers": [
+   "A12_boneco_neve",
+   "D8_gatinho_elfo",
+   "C12_snoopy_presente"
+  ]
+ },
+ {
+  "arquivo": "intro_02.png",
+  "de": 0.5,
+  "ate": 1.0,
+  "stickers": [
+   "B3_biscoito_gengibre",
+   "B16_azevinho",
+   "B9_meia"
+  ]
+ },
+ {
+  "arquivo": "intro_03.png",
+  "de": 1.0,
+  "ate": 1.5,
+  "stickers": [
+   "D8_gatinho_elfo",
+   "C12_snoopy_presente",
+   "D3_gatinho_arvore"
+  ]
+ },
+ {
+  "arquivo": "intro_04.png",
+  "de": 1.5,
+  "ate": 2.0,
+  "stickers": [
+   "B3_biscoito_gengibre",
+   "B16_azevinho",
+   "A12_boneco_neve"
+  ]
+ },
+ {
+  "arquivo": "intro_05.png",
+  "de": 2.0,
+  "ate": 2.5,
+  "stickers": [
+   "C12_snoopy_presente",
+   "D3_gatinho_arvore",
+   "D8_gatinho_elfo"
+  ]
+ },
+ {
+  "arquivo": "intro_06.png",
+  "de": 2.5,
+  "ate": 3.0,
+  "stickers": [
+   "B3_biscoito_gengibre",
+   "B9_meia",
+   "C8_snoopy_boneco_neve"
+  ]
+ },
+ {
+  "arquivo": "intro_07.png",
+  "de": 3.0,
+  "ate": 3.5,
+  "stickers": [
+   "C12_snoopy_presente",
+   "B16_azevinho",
+   "D8_gatinho_elfo"
+  ]
+ }
+]

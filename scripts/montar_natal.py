@@ -223,8 +223,9 @@ def main(projeto):
             for a in glob.glob(os.path.join(projeto, "stickers", "*.png"))}
     for nome in imgs:
         shutil.copy(os.path.join(projeto, "stickers", nome + ".png"), os.path.join(kit, "stickers"))
+    usar_stickers = plano.get("stickers", True)  # Fran (03/11, Farm): tirou todos os stickers
     itens = []  # (de, ate, sticker, x, y, lado, giro_base)
-    for s in layout:
+    for s in (layout if usar_stickers else []):
         itens.append((0.0, gancho_fim, s["sticker"], s["x"], s["y"], s["lado"], s.get("giro", 0)))
     ctas = []
     for k, tr in enumerate(plano["trechos"]):
@@ -234,9 +235,9 @@ def main(projeto):
         if "cta" in tr:
             c0 = mapa(pcs, tr["fonte"], tr["cta"]["de"] + ATRASO, k) or jan[0]
             ctas.append((c0, jan[1], tr["cta"]["texto"]))
-            if "sticker" in tr:
+            if "sticker" in tr and usar_stickers:
                 itens.append((c0, jan[1], tr["sticker"], 880, 500, 170, 8))
-        elif "sticker" in tr:
+        elif "sticker" in tr and usar_stickers:
             itens.append((jan[0], min(jan[0] + STICKER_ITEM["dur"], dur), tr["sticker"], STICKER_ITEM["x"],
                           STICKER_ITEM["y"], STICKER_ITEM["lado"], rnd.choice([-7, 6, -5, 8])))
     seq = os.path.join(kit, "stickers_seq")
@@ -287,21 +288,33 @@ def main(projeto):
     ys = [850, 1055]
     for j, (txt, cor, tam, ital) in enumerate(plano["gancho"]["linhas"]):
         gancho_ev += pastel(0, gancho_fim, txt, cor, tam, 540, ys[j], ital, ini_ms=250 * j)
+    classico = plano.get("estilo_textos") == "classico"
+
+    def classico_ev(de, ate, txt, y):
+        """Rótulo clássico (Fran, 03/11): Playfair SemiBold em caixa alta espaçada, branco, sombra curta e leve."""
+        f = r"\fnPlayfair Display SemiBold\fs56\fsp6\fad(250,200)"
+        return [rf"Dialogue: 0,{ts(de)},{ts(ate)},T,,0,0,0,,{{\an5\pos(542,{y + 4})\blur4\1c&H000000&\1a&H70&{f}}}"
+                rf"{txt.upper()}",
+                rf"Dialogue: 1,{ts(de)},{ts(ate)},T,,0,0,0,,{{\an5\pos(540,{y}){f}}}{txt.upper()}"]
+
     rotulos_ev, pngs = [], []
     for k, tr in enumerate(plano["trechos"]):
         jan = janela_trecho(pcs, k)
         if jan and "rotulo" in tr:
             fim = min(jan[0] + ROTULO["dur"], dur)
-            ev = pastel(jan[0], fim, tr["rotulo"], ROTULO["cor"], ROTULO["tam"], 540, ROTULO["y"], False)
+            ev = (classico_ev(jan[0], fim, tr["rotulo"], ROTULO["y"]) if classico else
+                  pastel(jan[0], fim, tr["rotulo"], ROTULO["cor"], ROTULO["tam"], 540, ROTULO["y"], False))
             rotulos_ev += ev
             pngs.append((f"rotulo_{len(pngs) + 1:02d}", ev, jan[0], fim, tr["rotulo"]))
     cta_ev = []
     for c0, c1, txt in ctas:
         partes = txt.split()
         corpo = (rf"{{\fnMontserrat Medium\fs60}}{' '.join(p for p in partes if p != 'QUERO')}\N"
-                 rf"{{\fnMontserrat ExtraBold\fs130\bord5\3c&HFFFFFF&\1c{bgr('#EE8E9C')}}}QUERO")
-        ev = [rf"Dialogue: 0,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos(544,486)\blur5\1c&H000000&\1a&HB0&"
-              rf"\bord6\3c&H000000&\3a&HB0&{pop(0)}}}{corpo}",
+                 + (r"{\fnMontserrat ExtraBold\fs130}QUERO" if classico else
+                    rf"{{\fnMontserrat ExtraBold\fs130\bord5\3c&HFFFFFF&\1c{bgr('#EE8E9C')}}}QUERO"))
+        sombra = (r"\blur3\1c&H000000&\1a&HA0&" if classico else r"\blur5\1c&H000000&\1a&HB0&\bord6\3c&H000000&\3a&HB0&")
+        ev = [rf"Dialogue: 0,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos({542 if classico else 544},{483 if classico else 486})"
+              rf"{sombra}{pop(0)}}}{corpo}",
               rf"Dialogue: 1,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos(540,480){pop(0)}}}{corpo}"]
         cta_ev += ev
         pngs.append(("cta_comenta_quero", ev, c0, c1, txt))

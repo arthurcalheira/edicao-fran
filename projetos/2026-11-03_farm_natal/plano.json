@@ -305,5 +305,7 @@
   "farm": "Farm",
   "resistentezinho": "resistente"
  },
- "zoom_max": 0.12
+ "zoom_max": 0.12,
+ "stickers": false,
+ "estilo_textos": "classico"
 }

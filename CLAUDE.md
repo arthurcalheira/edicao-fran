@@ -54,6 +54,12 @@ Toda correção nova que a Fran fizer entra aqui na mesma hora, com data, para n
   - **efeito sonoro** de sininhos subindo junto com o texto (`scripts/sfx_brilho.py`, gerado aqui, sem licença de terceiros), uns 16 dB abaixo da voz.
 - **Abertura:** a Fran grava a apresentação ("Achadinhos de Natal da Farm…") num arquivo separado e menor. **Antes de propor a abertura, olhar TODOS os vídeos da pasta do Drive**, não só o mais recente.
 
+- **(03/11, Farm, depois de ver o vídeo pronto) Tirar os stickers e trocar os rótulos rosa por algo clássico.**
+  - Rótulos das peças: Playfair Display SemiBold em caixa alta espaçada, **branco**, sombra leve um pouco mais firme que a da legenda (para ler no teto claro). No `plano.json`: `"estilo_textos": "classico"`.
+  - "QUERO" do CTA em branco (Montserrat ExtraBold), sem rosa.
+  - Sem stickers no vídeo: `"stickers": false` no `plano.json`. Antes de pôr stickers num vídeo novo, perguntar se ela quer.
+  - O gancho pastel "Achadinhos de Natal", o glitter e o efeito sonoro da abertura continuam.
+
 ## Conferência antes de entregar
 1. Fazer a grade de quadros com o tempo na tela (`drawtext`, 2 a 4 quadros por segundo) e olhar:
    - os trechos sem fala;

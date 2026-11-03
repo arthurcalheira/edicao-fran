@@ -11,3 +11,7 @@ projetos/*/saida/pedacos_tmp/
 projetos/*/saida/capcut/stickers_seq*/
 projetos/*/saida/capcut/stickers/
 projetos/*/saida/*.ass
+projetos/*/saida/*.zip
+projetos/*/saida/**/*.mp4
+projetos/*/saida/**/*.wav
+projetos/*/saida/capcut/

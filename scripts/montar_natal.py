@@ -33,7 +33,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FPS = 30
 FONTES_DIR = os.path.expanduser("~/.fonts")
 LEG = {"fonte": "Montserrat SemiBold", "tam": 74, "y": 1180}
-ROTULO = {"y": 360, "tam": 68, "cor": "#EE8E9C", "dur": 2.6}
+ROTULO = {"y": 360, "tam": 80, "cor": "#EE8E9C", "dur": 2.6}
 STICKER_ITEM = {"x": 540, "y": 215, "lado": 150, "dur": 2.6}
 PASSO = 0.5  # stickers mexem (só rotação) a cada meio segundo
 
@@ -99,12 +99,13 @@ def main(projeto):
     gancho_fim = max(janela_trecho(pcs, k)[1] for k in plano["gancho"]["trechos"])
 
     # ---------- 1. cortes + zoom vai e volta ----------
+    reusar = "--reusar-base" in sys.argv and os.path.exists(os.path.join(saida, "base_cortes.mp4"))
     # Cada pedaço vira um arquivo (busca rápida, recodifica em 1080x1920/30 fps), depois junta com concat.
     tmpd = os.path.join(saida, "pedacos_tmp")
     shutil.rmtree(tmpd, ignore_errors=True)
     os.makedirs(tmpd)
     lista = []
-    for j, p in enumerate(pcs):
+    for j, p in enumerate([] if reusar else pcs):
         arq = os.path.join(tmpd, f"p{j:03d}.mp4")
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{p['a']:.3f}", "-i",
                         os.path.join(projeto, plano["fontes"][p["fonte"]][0]), "-t", f"{p['b'] - p['a']:.3f}",
@@ -132,10 +133,11 @@ def main(projeto):
     fil.append("[ac]loudnorm=I=-14:TP=-1.5:LRA=9,aresample=48000[az]")
     fil.insert(0, "[0:v]null[vc];[0:a]anull[ac]")
     base = os.path.join(saida, "base_cortes.mp4")
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", os.path.join(tmpd, "lista.txt"),
-                    "-filter_complex", ";".join(fil), "-map", "[vz]",
-                    "-map", "[az]", "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p",
-                    "-c:a", "aac", "-b:a", "192k", base], check=True)
+    if not reusar:
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i",
+                        os.path.join(tmpd, "lista.txt"), "-filter_complex", ";".join(fil), "-map", "[vz]",
+                        "-map", "[az]", "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p",
+                        "-c:a", "aac", "-b:a", "192k", base], check=True)
     shutil.rmtree(tmpd)
 
     # ---------- 2. stickers (abertura + peças), um quadro a cada 0,5 s, só girando ----------
@@ -157,7 +159,7 @@ def main(projeto):
             c0 = mapa(pcs, tr["fonte"], tr["cta"]["de"], k) or jan[0]
             ctas.append((c0, jan[1], tr["cta"]["texto"]))
             if "sticker" in tr:
-                itens.append((c0, jan[1], tr["sticker"], 880, 650, 170, 8))
+                itens.append((c0, jan[1], tr["sticker"], 880, 500, 170, 8))
         elif "sticker" in tr:
             itens.append((jan[0], min(jan[0] + STICKER_ITEM["dur"], dur), tr["sticker"], STICKER_ITEM["x"],
                           STICKER_ITEM["y"], STICKER_ITEM["lado"], rnd.choice([-7, 6, -5, 8])))
@@ -222,9 +224,9 @@ def main(projeto):
         partes = txt.split()
         corpo = (rf"{{\fnMontserrat Medium\fs60}}{' '.join(p for p in partes if p != 'QUERO')}\N"
                  rf"{{\fnMontserrat ExtraBold\fs130\bord5\3c&HFFFFFF&\1c{bgr('#EE8E9C')}}}QUERO")
-        ev = [rf"Dialogue: 0,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos(544,786)\blur5\1c&H000000&\1a&HB0&"
+        ev = [rf"Dialogue: 0,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos(544,486)\blur5\1c&H000000&\1a&HB0&"
               rf"\bord6\3c&H000000&\3a&HB0&{pop(0)}}}{corpo}",
-              rf"Dialogue: 1,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos(540,780){pop(0)}}}{corpo}"]
+              rf"Dialogue: 1,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos(540,480){pop(0)}}}{corpo}"]
         cta_ev += ev
         pngs.append(("cta_comenta_quero", ev, c0, c1, txt))
 

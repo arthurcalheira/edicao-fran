@@ -54,21 +54,6 @@
    "arquivo": "intro_05.png",
    "de": 2.0,
    "ate": 2.5
-  },
-  {
-   "arquivo": "intro_06.png",
-   "de": 2.5,
-   "ate": 3.0
-  },
-  {
-   "arquivo": "intro_07.png",
-   "de": 3.0,
-   "ate": 3.5
-  },
-  {
-   "arquivo": "intro_08.png",
-   "de": 3.5,
-   "ate": 4.0
   }
  ]
 }

@@ -4,3 +4,5 @@ projetos/*/saida/*.png
 remotion/node_modules/
 __pycache__/
 projetos/*/stickers/
+projetos/*/*.mov
+projetos/*/*.MOV

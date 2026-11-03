@@ -37,7 +37,9 @@ Toda correção nova que a Fran fizer entra aqui na mesma hora, com data, para n
 - **Sticker é sticker "aesthetic", não emoji.** Nada de Fluent Emoji, Twemoji ou parecidos. O estilo é de Pinterest/Instagram: laço coquette, enfeite vintage, azevinho em aquarela, estrela com glitter.
 - **Nada de editar, baixar asset ou montar kit antes de a Fran aprovar.** Primeiro mostrar as opções (folha com as imagens), esperar o "pode" e só depois seguir. Quando ela diz "não edita ainda", só preparar (baixar o bruto, transcrever) e perguntar.
 - **Vídeos de Natal e achadinhos podem ter cor.** O preto e branco vale para os Reels de provador. Para o CapCut (Mac), entregar um kit: vídeo cortado, legenda .srt, PNGs e roteiro de tempos.
-- **Introdução:** stickers que trocam a cada 0,5 s (stop-motion), gerados por `scripts/stickers_intro.py`. A pasta de stickers vai ser definida depois da aprovação.
+- **Introdução (corrigido em 03/11):** os stickers **não trocam**. Os mesmos ficam parados na tela e têm um **leve movimento a cada 0,5 s** (giram, deslocam e mudam de tamanho um pouquinho, estilo stop-motion). Gerados por `scripts/stickers_intro.py` a partir do `layout_intro.json` do projeto, longe do rosto e da peça.
+- **Stickers aprovados ficam em `projetos/<nome>/stickers/`** (fora do git, porque são de terceiros). Origem: pins que a Fran manda. Recortar a cartela em PNGs, montar a folha numerada e esperar ela escolher os códigos.
+- **Abertura:** a Fran grava a apresentação ("Achadinhos de Natal da Farm…") num arquivo separado e menor. **Antes de propor a abertura, olhar TODOS os vídeos da pasta do Drive**, não só o mais recente.
 
 ## Conferência antes de entregar
 1. Fazer a grade de quadros com o tempo na tela (`drawtext`, 2 a 4 quadros por segundo) e olhar:

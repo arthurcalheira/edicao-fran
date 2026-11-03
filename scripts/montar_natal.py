@@ -181,12 +181,25 @@ def main(projeto):
         if not jan:
             continue
         for z0, z1 in tr.get("zooms", [tr["zoom"]] if "zoom" in tr else []):
+            ps = [p for p in pcs if p["tr"] == k]
             a = mapa(pcs, tr["fonte"], z0 + ATRASO, k)
+            if a is None:  # caiu num corte: começa no próximo pedaço
+                prox = [p["ini"] for p in ps if p["a"] >= z0 + ATRASO]
+                a = prox[0] if prox else None
             b = mapa(pcs, tr["fonte"], z1 + ATRASO - 0.01, k)
-            a = jan[0] if a is None else a
-            b = jan[1] if b is None else b
-            if b - a >= 0.8:
+            if b is None:  # caiu num corte: termina no pedaço anterior
+                ant = [p["fim"] for p in ps if p["b"] <= z1 + ATRASO]
+                b = ant[-1] if ant else None
+            if a is not None and b is not None and b - a >= 0.8:
                 zooms.append((round(a, 3), round(b, 3)))
+    zooms.sort()
+    sem_sobrepor = []
+    for a, b in zooms:  # zoom leve: janelas nunca se somam
+        if sem_sobrepor and a < sem_sobrepor[-1][1]:
+            a = sem_sobrepor[-1][1]
+        if b - a >= 0.8:
+            sem_sobrepor.append((a, b))
+    zooms = sem_sobrepor
     if zooms:
         curva = "+".join(f"between(in/{FPS},{a},{b})*sin(PI*(in/{FPS}-{a})/{b - a})" for a, b in zooms)
         fil.append(f"[vc]scale=2160:3840:flags=lanczos,zoompan=z='1+{plano.get("zoom_max", 0.18)}*({curva})':d=1:"

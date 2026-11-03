@@ -1,7 +1,37 @@
 [
- {"sticker": "D3_gatinho_arvore", "x": 175, "y": 690, "lado": 270, "giro": -8},
- {"sticker": "B9_meia", "x": 140, "y": 1060, "lado": 220, "giro": 10},
- {"sticker": "B3_biscoito_gengibre", "x": 190, "y": 1420, "lado": 220, "giro": -6},
- {"sticker": "A12_boneco_neve", "x": 975, "y": 560, "lado": 230, "giro": 7},
- {"sticker": "D8_gatinho_elfo", "x": 930, "y": 1480, "lado": 270, "giro": 6}
+ {
+  "sticker": "D3_gatinho_arvore",
+  "x": 175,
+  "y": 640,
+  "lado": 270,
+  "giro": -8
+ },
+ {
+  "sticker": "B9_meia",
+  "x": 140,
+  "y": 1260,
+  "lado": 220,
+  "giro": 10
+ },
+ {
+  "sticker": "B3_biscoito_gengibre",
+  "x": 190,
+  "y": 1560,
+  "lado": 220,
+  "giro": -6
+ },
+ {
+  "sticker": "A12_boneco_neve",
+  "x": 975,
+  "y": 560,
+  "lado": 230,
+  "giro": 7
+ },
+ {
+  "sticker": "D8_gatinho_elfo",
+  "x": 930,
+  "y": 1480,
+  "lado": 270,
+  "giro": 6
+ }
 ]

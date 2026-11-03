@@ -39,6 +39,7 @@ Toda correção nova que a Fran fizer entra aqui na mesma hora, com data, para n
 - **Vídeos de Natal e achadinhos podem ter cor.** O preto e branco vale para os Reels de provador. Para o CapCut (Mac), entregar um kit: vídeo cortado, legenda .srt, PNGs e roteiro de tempos.
 - **Introdução (corrigido em 03/11):** os stickers **não trocam**. Os mesmos ficam parados na tela e têm um **leve movimento a cada 0,5 s** (giram, deslocam e mudam de tamanho um pouquinho, estilo stop-motion). Gerados por `scripts/stickers_intro.py` a partir do `layout_intro.json` do projeto, longe do rosto e da peça.
 - **Stickers aprovados ficam em `projetos/<nome>/stickers/`** (fora do git, porque são de terceiros). Origem: pins que a Fran manda. Recortar a cartela em PNGs, montar a folha numerada e esperar ela escolher os códigos.
+- **Gancho dos vídeos de Natal (03/11):** texto **no meio da tela**, quebrado em linhas ("Achadinhos" ENTER "de Natal"), em **cores pastel de Natal** (vermelho/rosa pastel #EE8E9C e verde pastel #7FC497), Playfair Display em negrito, com contorno branco fino e sombra leve para dar leitura.
 - **Abertura:** a Fran grava a apresentação ("Achadinhos de Natal da Farm…") num arquivo separado e menor. **Antes de propor a abertura, olhar TODOS os vídeos da pasta do Drive**, não só o mais recente.
 
 ## Conferência antes de entregar

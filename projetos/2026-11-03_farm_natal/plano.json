@@ -47,7 +47,13 @@
    "fonte": "bruto",
    "de": 563.0,
    "ate": 568.5,
-   "nota": "2º gancho: vai esgotar super rápido, a cara do verão europeu (sem o 'gente, olha isso' seguinte)"
+   "nota": "2º gancho: vai esgotar super rápido, a cara do verão europeu (sem o 'gente, olha isso' seguinte)",
+   "zooms": [
+    [
+     563.0,
+     566.2
+    ]
+   ]
   },
   {
    "fonte": "bruto",
@@ -55,22 +61,37 @@
    "ate": 73.7,
    "rotulo": "Lata organizadora",
    "sticker": "B16_azevinho",
-   "zoom": [
-    66.4,
-    68.9
+   "zooms": [
+    [
+     66.4,
+     68.9
+    ]
    ]
   },
   {
    "fonte": "bruto",
    "de": 83.3,
-   "ate": 91.0,
-   "rotulo": "Descansadores de cerâmica"
+   "ate": 86.0,
+   "rotulo": "Descansadores de cerâmica",
+   "nota": "só 'Descansador, amigas, em cerâmica.' (Fran pediu para tirar o 'pode quebrar')",
+   "zooms": [
+    [
+     83.4,
+     85.0
+    ]
+   ]
   },
   {
    "fonte": "bruto",
    "de": 129.3,
    "ate": 133.4,
-   "rotulo": "Abridor de coqueiro"
+   "rotulo": "Abridor de coqueiro",
+   "zooms": [
+    [
+     129.3,
+     131.0
+    ]
+   ]
   },
   {
    "fonte": "bruto",
@@ -78,15 +99,27 @@
    "ate": 168.9,
    "rotulo": "Kit 2 bowls",
    "sticker": "B3_biscoito_gengibre",
-   "zoom": [
-    166.0,
-    168.7
+   "zooms": [
+    [
+     166.0,
+     168.7
+    ]
    ]
   },
   {
    "fonte": "bruto",
    "de": 213.9,
-   "ate": 220.0
+   "ate": 220.0,
+   "zooms": [
+    [
+     214.6,
+     217.5
+    ],
+    [
+     218.0,
+     219.6
+    ]
+   ]
   },
   {
    "fonte": "bruto",
@@ -104,9 +137,15 @@
    "ate": 313.9,
    "rotulo": "Kit 2 pratos fundos",
    "sticker": "D3_gatinho_arvore",
-   "zoom": [
-    305.0,
-    307.4
+   "zooms": [
+    [
+     305.0,
+     307.4
+    ],
+    [
+     312.1,
+     313.6
+    ]
    ]
   },
   {
@@ -119,12 +158,24 @@
   {
    "fonte": "bruto",
    "de": 360.5,
-   "ate": 363.0
+   "ate": 363.0,
+   "zooms": [
+    [
+     360.5,
+     362.8
+    ]
+   ]
   },
   {
    "fonte": "bruto",
    "de": 536.1,
-   "ate": 541.1
+   "ate": 541.1,
+   "zooms": [
+    [
+     539.3,
+     541.0
+    ]
+   ]
   },
   {
    "fonte": "bruto",
@@ -132,15 +183,23 @@
    "ate": 423.0,
    "rotulo": "Pratos de jantar",
    "sticker": "B9_meia",
-   "zoom": [
-    418.5,
-    421.2
+   "zooms": [
+    [
+     418.5,
+     421.2
+    ]
    ]
   },
   {
    "fonte": "bruto",
    "de": 438.8,
-   "ate": 446.1
+   "ate": 446.1,
+   "zooms": [
+    [
+     438.8,
+     441.2
+    ]
+   ]
   },
   {
    "fonte": "bruto",
@@ -148,15 +207,23 @@
    "ate": 473.5,
    "rotulo": "Trio de canetas",
    "sticker": "D8_gatinho_elfo",
-   "zoom": [
-    471.3,
-    473.4
+   "zooms": [
+    [
+     471.3,
+     473.4
+    ]
    ]
   },
   {
    "fonte": "bruto",
    "de": 498.9,
-   "ate": 505.7
+   "ate": 505.7,
+   "zooms": [
+    [
+     501.0,
+     504.0
+    ]
+   ]
   },
   {
    "fonte": "bruto",
@@ -169,7 +236,13 @@
    "fonte": "bruto",
    "de": 712.8,
    "ate": 715.1,
-   "nota": "corta 'lindíssima'"
+   "nota": "corta 'lindíssima'",
+   "zooms": [
+    [
+     713.0,
+     715.0
+    ]
+   ]
   },
   {
    "fonte": "bruto",
@@ -179,7 +252,13 @@
   {
    "fonte": "bruto",
    "de": 724.2,
-   "ate": 726.2
+   "ate": 726.2,
+   "zooms": [
+    [
+     724.2,
+     726.0
+    ]
+   ]
   },
   {
    "fonte": "bruto",
@@ -225,5 +304,6 @@
   "coisas": "cores",
   "farm": "Farm",
   "resistentezinho": "resistente"
- }
+ },
+ "zoom_max": 0.12
 }

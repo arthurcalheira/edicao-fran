@@ -22,6 +22,7 @@ Toda correção nova que a Fran fizer entra aqui na mesma hora, com data, para n
 - Isso substitui a regra antiga do `analise-conteudos` de "Comenta QUERO escrito na tela já na primeira peça".
 
 ## Cortes (02/11/2026)
+- **(03/11) Sem crítica ao produto:** a Fran tirou o "cerâmica pode quebrar, poderia ser outro material". Não incluir ressalvas negativas sobre a peça, mesmo que os dados sugiram ressalva honesta.
 - **Cortar todo trecho sem fala:** giro, voltinha, caminhada ou corredor vazio. Se a peça precisa aparecer de costas, começar o trecho já na fala.
   - Não basta o `cortar_pausas_acima_s`, que só corta pausas entre palavras. Conferir o começo e o fim de cada trecho.
 - **Nada de transição feia.** Não usar close tremido nem câmera se mexendo. Na troca de look, entrar com ela já de frente, sem o giro de entrada.
@@ -34,9 +35,10 @@ Toda correção nova que a Fran fizer entra aqui na mesma hora, com data, para n
 - **Conferência obrigatória dos cortes:** transcrever cada pedaço cortado e conferir que começa e termina em palavra inteira, sem sobra da frase vizinha.
 
 ## Zoom (02/11/2026)
-- **Quando ela mostra a peça** (tecido, forro, lastex, modelagem, short, blusa), usar o zoom **"vai e volta"**: entra moderado (até cerca de 18%) e volta suave.
+- **Quando ela mostra a peça** (tecido, forro, lastex, modelagem, short, blusa), usar o zoom **"vai e volta"**: entra e volta suave.
+- **(03/11) Zoom leve onde for possível mostrar detalhe** (estampa, borda dourada, gravação, pauta, acabamento): até ~12%, em todo momento de detalhe, não só 3 a 5 por vídeo. No `plano.json`: `"zooms": [[de, ate], ...]` por trecho e `"zoom_max"`.
   - Não usar o zoom seco (punch-in).
-- **Janelas** de cerca de 1,5 a 3,5 s, de 3 a 5 por vídeo, marcadas em `zooms` no `plano.json`.
+- **Janelas** de cerca de 1,5 a 3,5 s.
 
 ## Stickers e aprovação (03/11/2026)
 - **Sticker é sticker "aesthetic", não emoji.** Nada de Fluent Emoji, Twemoji ou parecidos. O estilo é de Pinterest/Instagram: laço coquette, enfeite vintage, azevinho em aquarela, estrela com glitter.

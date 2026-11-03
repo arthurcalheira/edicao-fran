@@ -177,17 +177,19 @@ def main(projeto):
     fil = []
     zooms = []
     for k, tr in enumerate(plano["trechos"]):
-        if "zoom" in tr:
-            a = mapa(pcs, tr["fonte"], tr["zoom"][0] + ATRASO, k)
-            b = mapa(pcs, tr["fonte"], tr["zoom"][1] + ATRASO - 0.01, k)
-            if a is None:
-                a = janela_trecho(pcs, k)[0]
-            if b is None:
-                b = janela_trecho(pcs, k)[1]
-            zooms.append((round(a, 3), round(b, 3)))
+        jan = janela_trecho(pcs, k)
+        if not jan:
+            continue
+        for z0, z1 in tr.get("zooms", [tr["zoom"]] if "zoom" in tr else []):
+            a = mapa(pcs, tr["fonte"], z0 + ATRASO, k)
+            b = mapa(pcs, tr["fonte"], z1 + ATRASO - 0.01, k)
+            a = jan[0] if a is None else a
+            b = jan[1] if b is None else b
+            if b - a >= 0.8:
+                zooms.append((round(a, 3), round(b, 3)))
     if zooms:
         curva = "+".join(f"between(in/{FPS},{a},{b})*sin(PI*(in/{FPS}-{a})/{b - a})" for a, b in zooms)
-        fil.append(f"[vc]scale=2160:3840:flags=lanczos,zoompan=z='1+0.18*({curva})':d=1:"
+        fil.append(f"[vc]scale=2160:3840:flags=lanczos,zoompan=z='1+{plano.get("zoom_max", 0.18)}*({curva})':d=1:"
                    f"x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':s=1080x1920:fps={FPS}[vz]")
     else:
         fil.append("[vc]null[vz]")

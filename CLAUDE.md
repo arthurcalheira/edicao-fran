@@ -19,6 +19,8 @@ Toda correção nova que a Fran fizer entra aqui na mesma hora, com data, para n
 - **Nunca deixar o tempo todo na tela.** Ele só aparece enquanto ela pede o link ou fala o CTA.
 - No CTA, a palavra **QUERO** vai com ênfase: caixa alta, Montserrat ExtraBold, bem maior que o "Comenta".
 - Se ela falar "quero" na fala, a palavra sai em ênfase na própria legenda (o `render_luxo.py` já faz).
+- **(07/11) Fonte do "Comenta QUERO" igual à do 1º Reel (laise):** "Comenta" Montserrat Medium 50 + "QUERO" Montserrat ExtraBold 84, **numa linha só, logo acima da legenda**, branco, sombra leve, **sem animação**. Não usar o QUERO gigante no topo com "pop". Vale para todos os vídeos (`montar_natal.py` com `"estilo_textos": "classico"`).
+- **(07/11) Não repetir fala:** quando duas peças parecidas têm a mesma frase ("no kit vêm dois pratos…"), manter só uma.
 - Isso substitui a regra antiga do `analise-conteudos` de "Comenta QUERO escrito na tela já na primeira peça".
 
 ## Velocidade (07/11/2026)

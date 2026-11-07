@@ -134,19 +134,16 @@
   {
    "fonte": "bruto",
    "de": 302.7,
-   "ate": 313.9,
+   "ate": 307.5,
    "rotulo": "Kit 2 pratos fundos",
    "sticker": "D3_gatinho_arvore",
    "zooms": [
     [
      305.0,
      307.4
-    ],
-    [
-     312.1,
-     313.6
     ]
-   ]
+   ],
+   "nota": "só 'esses pratos são os pratos fundos' (o 'no kit vêm dois pratos… rosinha' repetia a fala da sobremesa)"
   },
   {
    "fonte": "bruto",

@@ -341,13 +341,21 @@ def main(projeto):
     cta_ev = []
     for c0, c1, txt in ctas:
         partes = txt.split()
-        corpo = (rf"{{\fnMontserrat Medium\fs60}}{' '.join(p for p in partes if p != 'QUERO')}\N"
-                 + (r"{\fnMontserrat ExtraBold\fs130}QUERO" if classico else
-                    rf"{{\fnMontserrat ExtraBold\fs130\bord5\3c&HFFFFFF&\1c{bgr('#EE8E9C')}}}QUERO"))
-        sombra = (r"\blur3\1c&H000000&\1a&HA0&" if classico else r"\blur5\1c&H000000&\1a&HB0&\bord6\3c&H000000&\3a&HB0&")
-        ev = [rf"Dialogue: 0,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos({542 if classico else 544},{cta_y + (3 if classico else 6)})"
-              rf"{sombra}{pop(0)}}}{corpo}",
-              rf"Dialogue: 1,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos(540,{cta_y}){pop(0)}}}{corpo}"]
+        resto = " ".join(p for p in partes if p != "QUERO")
+        if classico:
+            # Igual ao 1º Reel (laise, 02/11), pedido da Fran em 07/11: "Comenta" Montserrat Medium 50 +
+            # "QUERO" Montserrat ExtraBold 84, numa linha, logo acima da legenda, branco, sombra leve, sem animação.
+            corpo = rf"{{\fnMontserrat Medium\fs50}}{resto} {{\fnMontserrat ExtraBold\fs84}}QUERO"
+            yq = LEG["y"] - LEG["tam"] - 25
+            ev = [rf"Dialogue: 0,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an2\pos(542,{yq + 3})\blur3\1c&H000000&\1a&HA0&"
+                  rf"\fad(200,150)}}{corpo}",
+                  rf"Dialogue: 1,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an2\pos(540,{yq})\fad(200,150)}}{corpo}"]
+        else:
+            corpo = (rf"{{\fnMontserrat Medium\fs60}}{resto}\N"
+                     rf"{{\fnMontserrat ExtraBold\fs130\bord5\3c&HFFFFFF&\1c{bgr('#EE8E9C')}}}QUERO")
+            sombra = r"\blur5\1c&H000000&\1a&HB0&\bord6\3c&H000000&\3a&HB0&"
+            ev = [rf"Dialogue: 0,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos(544,{cta_y + 6}){sombra}{pop(0)}}}{corpo}",
+                  rf"Dialogue: 1,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos(540,{cta_y}){pop(0)}}}{corpo}"]
         cta_ev += ev
         pngs.append(("cta_comenta_quero", ev, c0, c1, txt))
 

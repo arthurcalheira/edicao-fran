@@ -19,7 +19,7 @@
   "trechos": [
    0
   ],
-  "dur": 4.6,
+  "dur": 3.9,
   "y": 1250
  },
  "trechos": [
@@ -65,7 +65,8 @@
    "fonte": "bruto",
    "de": 77.6,
    "ate": 89.2,
-   "nota": "melhor tomada de 'mesmo ela sendo uma calça com cor'"
+   "nota": "melhor tomada de 'mesmo ela sendo uma calça com cor'",
+   "rotulo": "Fran · 1,64 m · petite"
   },
   {
    "fonte": "bruto",
@@ -105,5 +106,6 @@
   "&a": ""
  },
  "rotulo_y": 290,
- "cta_y": 370
+ "cta_y": 370,
+ "velocidade": 1.2
 }

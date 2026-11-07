@@ -21,6 +21,9 @@ Toda correção nova que a Fran fizer entra aqui na mesma hora, com data, para n
 - Se ela falar "quero" na fala, a palavra sai em ênfase na própria legenda (o `render_luxo.py` já faz).
 - Isso substitui a regra antiga do `analise-conteudos` de "Comenta QUERO escrito na tela já na primeira peça".
 
+## Velocidade (07/11/2026)
+- **Sempre 1,2x** (pedido da Fran: "sempre colocar 1.2"). Padrão `VELOCIDADE = 1.2` no `montar_natal.py`; `"velocidade"` no `plano.json` só para exceção. O `dur` do gancho é em tempo do vídeo final (já acelerado).
+
 ## Cortes (02/11/2026)
 - **(03/11) Sem crítica ao produto:** a Fran tirou o "cerâmica pode quebrar, poderia ser outro material". Não incluir ressalvas negativas sobre a peça, mesmo que os dados sugiram ressalva honesta.
 - **Cortar todo trecho sem fala:** giro, voltinha, caminhada ou corredor vazio. Se a peça precisa aparecer de costas, começar o trecho já na fala.

@@ -40,6 +40,7 @@ LEG = {"fonte": "Montserrat SemiBold", "tam": 74, "y": 1180}
 ROTULO = {"y": 360, "tam": 80, "cor": "#EE8E9C", "dur": 2.6}
 STICKER_ITEM = {"x": 540, "y": 215, "lado": 150, "dur": 2.6}
 PASSO = 0.5  # stickers mexem (só rotação) a cada meio segundo
+VELOCIDADE = 1.2  # Fran (07/11): "sempre colocar 1.2"
 ATRASO = 0.25  # a transcrição sai adiantada ~0,25 s em relação à voz real (medido com o VAD em 03/11)
 
 
@@ -140,7 +141,8 @@ def pedacos(plano, palavras, projeto):
             out.append({"tr": k, "fonte": f, "a": round(a, 3), "b": round(b, 3)})
     t = 0.0
     for p in out:
-        p["ini"], t = t, t + (p["b"] - p["a"])
+        p["vel"] = plano.get("velocidade", VELOCIDADE)
+        p["ini"], t = t, t + (p["b"] - p["a"]) / p["vel"]
         p["fim"] = t
     return out
 
@@ -148,7 +150,7 @@ def pedacos(plano, palavras, projeto):
 def mapa(pcs, fonte, t, tr=None):
     for p in pcs:
         if p["fonte"] == fonte and p["a"] <= t < p["b"] and (tr is None or p["tr"] == tr):
-            return p["ini"] + (t - p["a"])
+            return p["ini"] + (t - p["a"]) / p.get("vel", 1.0)
     return None
 
 
@@ -182,10 +184,11 @@ def main(projeto):
     lista = []
     for j, p in enumerate([] if reusar else pcs):
         arq = os.path.join(tmpd, f"p{j:03d}.mp4")
-        subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{p['a']:.3f}", "-i",
-                        os.path.join(projeto, plano["fontes"][p["fonte"]][0]), "-t", f"{p['b'] - p['a']:.3f}",
-                        "-vf", f"fps={FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1",
-                        "-af", "aresample=48000", "-ac", "2", "-c:v", "libx264", "-preset", "fast", "-crf", "14",
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{p['a']:.3f}", "-t", f"{p['b'] - p['a']:.3f}", "-i",
+                        os.path.join(projeto, plano["fontes"][p["fonte"]][0]),
+                        "-vf", f"setpts=PTS/{p['vel']},fps={FPS},scale=1080:1920:force_original_aspect_ratio=increase,"
+                               "crop=1080:1920,setsar=1",
+                        "-af", f"atempo={p['vel']},aresample=48000", "-ac", "2", "-c:v", "libx264", "-preset", "fast", "-crf", "14",
                         "-pix_fmt", "yuv420p", "-c:a", "pcm_s16le", arq.replace(".mp4", ".mov")], check=True)
         lista.append(f"file '{os.path.basename(arq).replace('.mp4', '.mov')}'")
     open(os.path.join(tmpd, "lista.txt"), "w").write("\n".join(lista) + "\n")
@@ -363,8 +366,8 @@ def main(projeto):
                     if not novo.strip(".,!?…"):  # correção vazia: a palavra sai da legenda
                         continue
                     txt = novo[0].upper() + novo[1:] if txt[:1].isupper() else novo
-                i = p["ini"] + max(wi - p["a"], 0)
-                f = p["ini"] + min(wf, p["b"]) - p["a"]
+                i = p["ini"] + max(wi - p["a"], 0) / p["vel"]
+                f = p["ini"] + (min(wf, p["b"]) - p["a"]) / p["vel"]
                 novas.append({"i": round(i, 3), "f": round(max(f, i + 0.08), 3), "p": txt})
     leg_ev, srt = [], []
     for b in blocos(novas, 4, max_dur=1.8):

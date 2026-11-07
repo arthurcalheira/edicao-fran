@@ -71,6 +71,11 @@ Toda correção nova que a Fran fizer entra aqui na mesma hora, com data, para n
 - **Transcrição completa sem filtro de silêncio** (`vad_filter=False`): com o filtro, o faster-whisper perdeu frases ("Qual é o argumento mais dessa calça?").
 - **Capa do Reels:** `scripts/capa.py` a partir da foto que ela manda. A foto 3:4 entra inteira no miolo (é o que a grade do perfil mostra), fundo desfocado completa o 9:16, texto no mesmo estilo do gancho (Playfair branco, sobretítulo em caixa alta + título com itálico) na parte de cima, longe do rosto.
 
+## Nomes e grafias (07/11/2026)
+- **Petit** (linha da C&A) escreve assim, sem "e": nunca "petite".
+- **Calça barrel = calça Ballon** (é como ela chama). Escrever "Ballon".
+- **Fontes "de antes":** a Fran se refere às fontes do Reel "BALLOON + PEPLUM" (Dd9ybZlyiJ4, 01/10, C&A), editado no Canva: título "Encontrei o look perfeito" digitado + "Blusa Peplum + Calça Ballon". Pegar as fontes desse Reel antes de definir o visual dos próximos.
+
 ## Conferência antes de entregar
 1. Fazer a grade de quadros com o tempo na tela (`drawtext`, 2 a 4 quadros por segundo) e olhar:
    - os trechos sem fala;

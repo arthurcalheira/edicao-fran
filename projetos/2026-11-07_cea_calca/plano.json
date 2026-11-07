@@ -44,7 +44,7 @@
    "fonte": "bruto",
    "de": 39.4,
    "ate": 52.9,
-   "rotulo": "Wide leg slim petite",
+   "rotulo": "Wide leg slim petit",
    "zooms": [
     [
      42.4,
@@ -66,7 +66,7 @@
    "de": 77.6,
    "ate": 89.2,
    "nota": "melhor tomada de 'mesmo ela sendo uma calça com cor'",
-   "rotulo": "Fran · 1,64 m · petite"
+   "rotulo": "Fran · 1,64 m · petit"
   },
   {
    "fonte": "bruto",
@@ -89,7 +89,6 @@
   "wide",
   "leg",
   "slim",
-  "petite",
   "manteiga",
   "elastano",
   "reta",
@@ -98,12 +97,14 @@
   "link",
   "esgota",
   "combinações",
-  "estoque"
+  "estoque",
+  "petit"
  ],
  "correcoes": {
   "causa": "calça",
   "c": "C&A",
-  "&a": ""
+  "&a": "",
+  "petite": "Petit"
  },
  "rotulo_y": 290,
  "cta_y": 370,

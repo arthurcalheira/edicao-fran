@@ -15,3 +15,6 @@ projetos/*/saida/*.zip
 projetos/*/saida/**/*.mp4
 projetos/*/saida/**/*.wav
 projetos/*/saida/capcut/
+projetos/*/*.jpg
+projetos/*/saida/*.jpg
+projetos/*/saida/*.png

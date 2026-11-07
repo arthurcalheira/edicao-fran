@@ -22,6 +22,7 @@ import glob
 import json
 import os
 import random
+import re
 import shutil
 import subprocess
 import sys
@@ -116,7 +117,17 @@ def pedacos(plano, palavras, projeto):
         hi = w1["f"] + 0.6
         if prox and prox["i"] - w1["f"] < 0.9:
             hi = vale(audios[f], w1["f"], prox["i"] + 0.2)
-        vozes = [(max(a - PAD_INI, lo), min(b + PAD_FIM, hi)) for a, b in regs[f] if b > lo and a < hi]
+        rs = [[a, b] for a, b in regs[f] if b > lo and a < hi]
+        # fala baixa: se o VAD começa bem depois do que a transcrição indica, volta pelo volume (> -55 dB)
+        if rs and rs[0][0] - (w0["i"] + ATRASO) > 0.3:
+            t = rs[0][0]
+            while t - 0.02 > max(lo, rs[0][0] - 1.0):
+                q = audios[f][int((t - 0.02) * 16000):int(t * 16000)]
+                if 20 * np.log10(np.sqrt((q ** 2).mean()) + 1e-9) < -55:
+                    break
+                t -= 0.02
+            rs[0][0] = t
+        vozes = [(max(a - PAD_INI, lo), min(b + PAD_FIM, hi)) for a, b in rs]
         vozes = [(a, b) for a, b in vozes if b - a > 0.08]
         # junta vozes separadas por menos de GAP; o resto (respiro, silêncio) sai
         junt = []
@@ -157,6 +168,10 @@ def main(projeto):
     for d in (saida, kit, os.path.join(kit, "textos"), os.path.join(kit, "stickers")):
         os.makedirs(d, exist_ok=True)
     gancho_fim = max(janela_trecho(pcs, k)[1] for k in plano["gancho"]["trechos"])
+    if "dur" in plano["gancho"]:  # gancho escrito só nos primeiros segundos (provador)
+        gancho_fim = min(gancho_fim, plano["gancho"]["dur"])
+    LEG["tam"] = plano.get("legenda_tam", LEG["tam"])
+    efeitos = plano.get("efeitos_abertura", True)  # glitter + sininhos: só nos vídeos de Natal
 
     # ---------- 1. cortes + zoom vai e volta ----------
     reusar = "--reusar-base" in sys.argv and os.path.exists(os.path.join(saida, "base_cortes.mp4"))
@@ -218,12 +233,12 @@ def main(projeto):
 
     # ---------- 2. stickers (abertura + peças), um quadro a cada 0,5 s, só girando ----------
     rnd = random.Random(11)
-    layout = json.load(open(os.path.join(projeto, "layout_intro.json")))
+    usar_stickers = plano.get("stickers", True)  # Fran (03/11, Farm): tirou todos os stickers
+    layout = json.load(open(os.path.join(projeto, "layout_intro.json"))) if usar_stickers else []
     imgs = {os.path.basename(a)[:-4]: Image.open(a).convert("RGBA")
             for a in glob.glob(os.path.join(projeto, "stickers", "*.png"))}
     for nome in imgs:
         shutil.copy(os.path.join(projeto, "stickers", nome + ".png"), os.path.join(kit, "stickers"))
-    usar_stickers = plano.get("stickers", True)  # Fran (03/11, Farm): tirou todos os stickers
     itens = []  # (de, ate, sticker, x, y, lado, giro_base)
     for s in (layout if usar_stickers else []):
         itens.append((0.0, gancho_fim, s["sticker"], s["x"], s["y"], s["lado"], s.get("giro", 0)))
@@ -259,7 +274,8 @@ def main(projeto):
     # ---------- 3. glitter e efeito sonoro da abertura ----------
     glit = os.path.join(kit, "glitter")
     shutil.rmtree(glit, ignore_errors=True)
-    subprocess.run([sys.executable, os.path.join(RAIZ, "scripts", "glitter.py"), glit, f"{gancho_fim:.2f}", "30", "80"],
+    subprocess.run([sys.executable, os.path.join(RAIZ, "scripts", "glitter.py"), glit, f"{gancho_fim:.2f}", "30",
+                    "80" if efeitos else "0"],
                    check=True, stdout=subprocess.DEVNULL)
     sfx = os.path.join(kit, "sfx_brilho.wav")
     subprocess.run([sys.executable, os.path.join(RAIZ, "scripts", "sfx_brilho.py"), sfx, "1.6"], check=True,
@@ -285,9 +301,20 @@ def main(projeto):
                 rf"{pop(ini_ms)}}}{txt}"]
 
     gancho_ev = []
-    ys = [850, 1055]
-    for j, (txt, cor, tam, ital) in enumerate(plano["gancho"]["linhas"]):
-        gancho_ev += pastel(0, gancho_fim, txt, cor, tam, 540, ys[j], ital, ini_ms=250 * j)
+    g = plano["gancho"]
+    if g.get("estilo") == "luxo":
+        # Reels de provador: Playfair branco, sobretítulo em caixa alta espaçada + título (*itálico*), sombra leve
+        tit = re.sub(r"\*(.+?)\*", r"{\\i1}\1{\\i0}", g["titulo"])
+        corpo = (rf"{{\fnPlayfair Display SemiBold\fs44\fsp6}}{g['sup']}\N{{\fs14}} \N"
+                 rf"{{\fnPlayfair Display\fs{g.get('tam', 104)}\fsp0}}{tit}")
+        y = g.get("y", 1250)
+        gancho_ev = [rf"Dialogue: 0,{ts(0)},{ts(gancho_fim)},T,,0,0,0,,{{\an2\pos(542,{y + 4})\blur4\1c&H000000&"
+                     rf"\1a&H70&\fad(250,200)}}{corpo}",
+                     rf"Dialogue: 1,{ts(0)},{ts(gancho_fim)},T,,0,0,0,,{{\an2\pos(540,{y})\fad(250,200)}}{corpo}"]
+    else:
+        ys = [850, 1055]
+        for j, (txt, cor, tam, ital) in enumerate(g["linhas"]):
+            gancho_ev += pastel(0, gancho_fim, txt, cor, tam, 540, ys[j], ital, ini_ms=250 * j)
     classico = plano.get("estilo_textos") == "classico"
 
     def classico_ev(de, ate, txt, y):
@@ -331,6 +358,8 @@ def main(projeto):
                 nucleo = txt.strip(".,!?…").lower()
                 if nucleo in corr:
                     novo = txt.lower().replace(nucleo, corr[nucleo])
+                    if not novo.strip(".,!?…"):  # correção vazia: a palavra sai da legenda
+                        continue
                     txt = novo[0].upper() + novo[1:] if txt[:1].isupper() else novo
                 i = p["ini"] + max(wi - p["a"], 0)
                 f = p["ini"] + min(wf, p["b"]) - p["a"]
@@ -382,7 +411,7 @@ def main(projeto):
                     Image.new("RGBA", (1080, 1920), (0, 0, 0, 0)).save(os.path.join(st_dir, f"st_{q + 1:04d}.png"))
         fc = (f"[1:v]fps={FPS},format=rgba[s];[2:v]format=rgba[g];[0:v][g]overlay=0:0:eof_action=pass[vg];"
               f"[vg][s]overlay=0:0:eof_action=pass[vs];[vs]ass={ass}:fontsdir={FONTES_DIR}[vo];"
-              f"[3:a]aresample=48000,volume=-16dB[fx];[0:a][fx]amix=inputs=2:duration=first:normalize=0[ao]")
+              f"[3:a]aresample=48000,volume={'-16dB' if efeitos else '0'}[fx];[0:a][fx]amix=inputs=2:duration=first:normalize=0[ao]")
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", base, "-framerate", str(int(1 / PASSO)), "-i",
                         os.path.join(st_dir, "st_%04d.png"), "-framerate", str(FPS), "-i",
                         os.path.join(glit, "glitter_%04d.png"), "-i", sfx, "-filter_complex", fc, "-map", "[vo]",

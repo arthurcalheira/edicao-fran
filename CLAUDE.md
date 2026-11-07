@@ -60,6 +60,12 @@ Toda correção nova que a Fran fizer entra aqui na mesma hora, com data, para n
   - Sem stickers no vídeo: `"stickers": false` no `plano.json`. Antes de pôr stickers num vídeo novo, perguntar se ela quer.
   - O gancho pastel "Achadinhos de Natal", o glitter e o efeito sonoro da abertura continuam.
 
+## Reels de provador com o pipeline novo (07/11/2026, calça C&A)
+- Usar `scripts/montar_natal.py` também no provador: `"stickers": false`, `"efeitos_abertura": false`, `"estilo_textos": "classico"`, `"gancho": {"estilo": "luxo", "sup": ..., "titulo": "*itálico* ...", "dur": ~4,5, "y": 1250}`. Ajustar `rotulo_y`/`cta_y` para não encostar na cabeça dela.
+- **Fala baixa:** o VAD pode perder o começo de frase falada mais baixo; o script volta pelo volume (> -55 dB) quando o VAD começa > 0,3 s depois da transcrição. Mesmo assim, conferir cada pedaço transcrevendo.
+- **Transcrição completa sem filtro de silêncio** (`vad_filter=False`): com o filtro, o faster-whisper perdeu frases ("Qual é o argumento mais dessa calça?").
+- **Capa do Reels:** `scripts/capa.py` a partir da foto que ela manda. A foto 3:4 entra inteira no miolo (é o que a grade do perfil mostra), fundo desfocado completa o 9:16, texto no mesmo estilo do gancho (Playfair branco, sobretítulo em caixa alta + título com itálico) na parte de cima, longe do rosto.
+
 ## Conferência antes de entregar
 1. Fazer a grade de quadros com o tempo na tela (`drawtext`, 2 a 4 quadros por segundo) e olhar:
    - os trechos sem fala;

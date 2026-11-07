@@ -316,6 +316,8 @@ def main(projeto):
         for j, (txt, cor, tam, ital) in enumerate(g["linhas"]):
             gancho_ev += pastel(0, gancho_fim, txt, cor, tam, 540, ys[j], ital, ini_ms=250 * j)
     classico = plano.get("estilo_textos") == "classico"
+    ROTULO["y"] = plano.get("rotulo_y", ROTULO["y"])
+    cta_y = plano.get("cta_y", 480)
 
     def classico_ev(de, ate, txt, y):
         """Rótulo clássico (Fran, 03/11): Playfair SemiBold em caixa alta espaçada, branco, sombra curta e leve."""
@@ -340,9 +342,9 @@ def main(projeto):
                  + (r"{\fnMontserrat ExtraBold\fs130}QUERO" if classico else
                     rf"{{\fnMontserrat ExtraBold\fs130\bord5\3c&HFFFFFF&\1c{bgr('#EE8E9C')}}}QUERO"))
         sombra = (r"\blur3\1c&H000000&\1a&HA0&" if classico else r"\blur5\1c&H000000&\1a&HB0&\bord6\3c&H000000&\3a&HB0&")
-        ev = [rf"Dialogue: 0,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos({542 if classico else 544},{483 if classico else 486})"
+        ev = [rf"Dialogue: 0,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos({542 if classico else 544},{cta_y + (3 if classico else 6)})"
               rf"{sombra}{pop(0)}}}{corpo}",
-              rf"Dialogue: 1,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos(540,480){pop(0)}}}{corpo}"]
+              rf"Dialogue: 1,{ts(c0)},{ts(c1)},T,,0,0,0,,{{\an5\pos(540,{cta_y}){pop(0)}}}{corpo}"]
         cta_ev += ev
         pngs.append(("cta_comenta_quero", ev, c0, c1, txt))
 

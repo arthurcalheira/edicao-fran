@@ -1,21 +1,109 @@
 {
  "_nota": "Reel de provador (estilo luxo): calça wide leg slim petite amarelo manteiga da C&A. Só trechos falados, sem stickers, sem efeitos de Natal.",
- "fontes": {"bruto": ["bruto.mov", "transcricao.json"]},
+ "fontes": {
+  "bruto": [
+   "bruto.mov",
+   "transcricao.json"
+  ]
+ },
  "pausa_max_s": 0.3,
  "stickers": false,
  "efeitos_abertura": false,
  "estilo_textos": "classico",
  "legenda_tam": 74,
  "zoom_max": 0.12,
- "gancho": {"estilo": "luxo", "sup": "A MAIS VENDIDA DA C&A", "titulo": "*Wide leg* amarelo manteiga", "trechos": [0], "dur": 4.6, "y": 1250},
+ "gancho": {
+  "estilo": "luxo",
+  "sup": "A MAIS VENDIDA DA C&A",
+  "titulo": "*Wide leg* amarelo manteiga",
+  "trechos": [
+   0
+  ],
+  "dur": 4.6,
+  "y": 1250
+ },
  "trechos": [
-  {"fonte": "bruto", "de": 15.3, "ate": 25.0, "zooms": [[23.0, 25.0]], "nota": "gancho com a sacola"},
-  {"fonte": "bruto", "de": 33.3, "ate": 39.1},
-  {"fonte": "bruto", "de": 39.4, "ate": 52.9, "rotulo": "Wide leg slim petite", "zooms": [[42.4, 44.6], [46.3, 48.6], [51.5, 53.0]], "nota": "corta 'impressionada com essa modelagem'"},
-  {"fonte": "bruto", "de": 77.6, "ate": 89.2, "nota": "melhor tomada de 'mesmo ela sendo uma calça com cor'"},
-  {"fonte": "bruto", "de": 97.0, "ate": 98.9},
-  {"fonte": "bruto", "de": 107.3, "ate": 114.7, "cta": {"de": 110.1, "texto": "Comenta QUERO"}, "nota": "segunda tomada de 'indiscutível'"}
+  {
+   "fonte": "bruto",
+   "de": 15.3,
+   "ate": 25.0,
+   "zooms": [
+    [
+     23.0,
+     25.0
+    ]
+   ],
+   "nota": "gancho com a sacola"
+  },
+  {
+   "fonte": "bruto",
+   "de": 33.3,
+   "ate": 39.1
+  },
+  {
+   "fonte": "bruto",
+   "de": 39.4,
+   "ate": 52.9,
+   "rotulo": "Wide leg slim petite",
+   "zooms": [
+    [
+     42.4,
+     44.6
+    ],
+    [
+     46.3,
+     48.6
+    ],
+    [
+     51.5,
+     53.0
+    ]
+   ],
+   "nota": "corta 'impressionada com essa modelagem'"
+  },
+  {
+   "fonte": "bruto",
+   "de": 77.6,
+   "ate": 89.2,
+   "nota": "melhor tomada de 'mesmo ela sendo uma calça com cor'"
+  },
+  {
+   "fonte": "bruto",
+   "de": 97.0,
+   "ate": 98.9
+  },
+  {
+   "fonte": "bruto",
+   "de": 107.3,
+   "ate": 114.7,
+   "cta": {
+    "de": 110.1,
+    "texto": "Comenta QUERO"
+   },
+   "nota": "segunda tomada de 'indiscutível'"
+  }
  ],
- "destaques": ["c&a", "wide", "leg", "slim", "petite", "manteiga", "elastano", "reta", "atrás", "clean", "link", "esgota", "combinações", "estoque"],
- "correcoes": {"causa": "calça", "c": "C&A", "&a": ""}
+ "destaques": [
+  "c&a",
+  "wide",
+  "leg",
+  "slim",
+  "petite",
+  "manteiga",
+  "elastano",
+  "reta",
+  "atrás",
+  "clean",
+  "link",
+  "esgota",
+  "combinações",
+  "estoque"
+ ],
+ "correcoes": {
+  "causa": "calça",
+  "c": "C&A",
+  "&a": ""
+ },
+ "rotulo_y": 290,
+ "cta_y": 370
 }
